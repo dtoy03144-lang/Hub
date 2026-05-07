@@ -3126,7 +3126,7 @@ task.spawn(function()
 				rayParams.FilterType = Enum.RaycastFilterType.Exclude
 
 				local i = 1
-				while i < #waypoints do
+					while i < #waypoints do
 					local jumpTo = i + 1
 
 					local maxSkip = math.max(i + 1, #waypoints - ((attempts - 1) * 4))
@@ -3257,11 +3257,17 @@ task.spawn(function()
 					end
 					wait(0.4)
 					---if three ==false then
+					if three=false then
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=values.Animal.Animal.CFrame-Vector3.new(0,3,0)
+						wait(0.3)
 
+					else
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=values.Animal.Animal.CFrame-Vector3.new(0,12,0)
+						wait(0.3)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity=Vector3.new(0,45,0)
+					end
 					local rt6 = getclos(values.Animal.Animal.CFrame.Position)
 					if rt6.Base and rt6.Pod then
-						wait(0.3)
 						for _=1,5,1 do
 							print(rt6.Base,rt6.Pod)
 							local args = {
