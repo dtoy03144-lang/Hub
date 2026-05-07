@@ -1,0 +1,4171 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+if game.Players.LocalPlayer.Name~="benayaop17" then return end
+-- Instances: 515 | Scripts: 0 | Modules: 0 | Tags: 0
+local G2L = {};
+if game.Players.LocalPlayer.PlayerGui:FindFirstChild("ChilliLibUI") then
+	game.Players.LocalPlayer.PlayerGui:FindFirstChild("ChilliLibUI"):Destroy()
+end
+-- StarterGui.ChilliLibUI
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["DisplayOrder"] = 10000;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
+G2L["1"]["Name"] = [[ChilliLibUI]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+local cfs = {
+	[1] = {
+		[1] = {
+			Pos = CFrame.new(-320.126007, -7.00197601, 185.293854, -0.993426561, 8.15787828e-08, 0.114471443, 6.94306905e-08, 1, -1.10110349e-07, -0.114471443, -1.01438715e-07, -0.993426561),
+			Main = CFrame.new(-317.978027, -7.00197697, 195.500565, -0.999318898, -9.7737427e-09, 0.036901284, -9.1156318e-09, 1, 1.80026198e-08, -0.036901284, 1.76539814e-08, -0.999318898)
+		},
+		[2] = {
+			Pos = CFrame.new(-320.126007, -7.00197601, 185.293854, -0.993426561, 8.15787828e-08, 0.114471443, 6.94306905e-08, 1, -1.10110349e-07, -0.114471443, -1.01438715e-07, -0.993426561),
+			Jump = 25,
+			Main = CFrame.new(-317.978027, -7.00197697, 195.500565, -0.999318898, -9.7737427e-09, 0.036901284, -9.1156318e-09, 1, 1.80026198e-08, -0.036901284, 1.76539814e-08, -0.999318898) + Vector3.new(0, 25, 0)
+		},
+		[3] = {
+			Pos = CFrame.new(-320.126007, -7.00197601, 185.293854, -0.993426561, 8.15787828e-08, 0.114471443, 6.94306905e-08, 1, -1.10110349e-07, -0.114471443, -1.01438715e-07, -0.993426561),
+			Jump = 35,
+			Main = CFrame.new(-317.978027, -7.00197697, 195.500565, -0.999318898, -9.7737427e-09, 0.036901284, -9.1156318e-09, 1, 1.80026198e-08, -0.036901284, 1.76539814e-08, -0.999318898) + Vector3.new(0, 35, 0)
+		},
+	},
+	[2] = {
+		[1] = {
+			Pos = CFrame.new(-312.955078, -7.00197697, 138.755676, 0.999429941, 1.72577472e-08, 0.0337606855, -1.58854689e-08, 1, -4.09154275e-08, -0.0337606855, 4.03557969e-08, 0.999429941),
+			Main = CFrame.new(-312.955078, -7.00197697, 138.755676, 0.999429941, 1.72577472e-08, 0.0337606855, -1.58854689e-08, 1, -4.09154275e-08, -0.0337606855, 4.03557969e-08, 0.999429941),
+		},
+		[2] = {
+			Pos = CFrame.new(-318.78595, -7.00197697, 150.240097, -0.84906584, 8.72747474e-09, 0.528286994, 3.25926948e-08, 1, 3.58628363e-08, -0.528286994, 4.76682054e-08, -0.84906584),
+			Jump = 25,
+			Main = CFrame.new(-312.955078, -7.00197697, 138.755676, 0.999429941, 1.72577472e-08, 0.0337606855, -1.58854689e-08, 1, -4.09154275e-08, -0.0337606855, 4.03557969e-08, 0.999429941) + Vector3.new(0, 25, 0),
+		},
+		[3] = {
+			Pos = CFrame.new(-318.78595, -7.00197697, 150.240097, -0.84906584, 8.72747474e-09, 0.528286994, 3.25926948e-08, 1, 3.58628363e-08, -0.528286994, 4.76682054e-08, -0.84906584),
+			Jump = 35,
+			Main = CFrame.new(-312.955078, -7.00197697, 138.755676, 0.999429941, 1.72577472e-08, 0.0337606855, -1.58854689e-08, 1, -4.09154275e-08, -0.0337606855, 4.03557969e-08, 0.999429941) + Vector3.new(0, 35, 0),
+		},
+	},
+	[3] = {
+		[1] = {
+			Pos = CFrame.new(-321.46579, -7.00197744, 31.7368622, 0.999963939, 1.56384612e-08, -0.00848987978, -1.56016018e-08, 1, 4.4078412e-09, 0.00848987978, -4.2752264e-09, 0.999963939),
+			Main = CFrame.new(-321.46579, -7.00197744, 31.7368622, 0.999963939, 1.56384612e-08, -0.00848987978, -1.56016018e-08, 1, 4.4078412e-09, 0.00848987978, -4.2752264e-09, 0.999963939),
+		},
+		[2] = {
+			Pos = CFrame.new(-323.534607, -7.00197697, 50.1859779, -0.98889327, 1.06619549e-08, 0.148627415, 8.27610369e-10, 1, -6.62296173e-08, -0.148627415, -6.53710188e-08, -0.98889327),
+			Jump = 25,
+			Main = CFrame.new(-321.46579, -7.00197744, 31.7368622, 0.999963939, 1.56384612e-08, -0.00848987978, -1.56016018e-08, 1, 4.4078412e-09, 0.00848987978, -4.2752264e-09, 0.999963939) + Vector3.new(0, 25, 0),
+		},
+		[3] = {
+			Pos = CFrame.new(-323.534607, -7.00197697, 50.1859779, -0.98889327, 1.06619549e-08, 0.148627415, 8.27610369e-10, 1, -6.62296173e-08, -0.148627415, -6.53710188e-08, -0.98889327),
+			Jump = 35,
+			Main = CFrame.new(-321.46579, -7.00197744, 31.7368622, 0.999963939, 1.56384612e-08, -0.00848987978, -1.56016018e-08, 1, 4.4078412e-09, 0.00848987978, -4.2752264e-09, 0.999963939) + Vector3.new(0, 35, 0),
+		}
+	},
+	[4] = {
+		[1] = {
+			Pos = CFrame.new(-316.478485, -7.00197697, -74.9820938, 0.998398244, 1.83832967e-08, -0.056577336, -1.22516637e-08, 1, 1.08723e-07, 0.056577336, -1.07855683e-07, 0.998398244),
+			Main = CFrame.new(-316.478485, -7.00197697, -74.9820938, 0.998398244, 1.83832967e-08, -0.056577336, -1.22516637e-08, 1, 1.08723e-07, 0.056577336, -1.07855683e-07, 0.998398244)
+		},
+		[2] = {
+			Pos = CFrame.new(-324.118561, -7.00197554, -59.6366196, -0.882893205, -1.91000726e-08, 0.469573796, -9.95208027e-10, 1, 3.88041457e-08, -0.469573796, 3.37925954e-08, -0.882893205),
+			Jump = 25,
+			Main = CFrame.new(-316.478485, -7.00197697, -74.9820938, 0.998398244, 1.83832967e-08, -0.056577336, -1.22516637e-08, 1, 1.08723e-07, 0.056577336, -1.07855683e-07, 0.998398244) + Vector3.new(0, 25, 0)
+		},
+		[3] = {
+			Pos = CFrame.new(-324.118561, -7.00197554, -59.6366196, -0.882893205, -1.91000726e-08, 0.469573796, -9.95208027e-10, 1, 3.88041457e-08, -0.469573796, 3.37925954e-08, -0.882893205),
+			Jump = 35,
+			Main = CFrame.new(-316.478485, -7.00197697, -74.9820938, 0.998398244, 1.83832967e-08, -0.056577336, -1.22516637e-08, 1, 1.08723e-07, 0.056577336, -1.07855683e-07, 0.998398244) + Vector3.new(0, 35, 0)
+		},
+	},
+	[5] = {
+		[1] = {
+			Pos = CFrame.new(-504.784607, -7.00197697, 195.516968, -0.997308433, 4.82475659e-09, 0.0733204111, 5.50838486e-09, 1, 9.121635e-09, -0.0733204111, 9.50096091e-09, -0.997308433),
+			Main = CFrame.new(-504.784607, -7.00197697, 195.516968, -0.997308433, 4.82475659e-09, 0.0733204111, 5.50838486e-09, 1, 9.121635e-09, -0.0733204111, 9.50096091e-09, -0.997308433)
+		},
+		[2] = {
+			Pos = CFrame.new(-506.302856, -7.00197697, 181.363556, -0.5107342, 4.47635635e-08, 0.859738648, 9.2690847e-08, 1, 2.99721759e-09, -0.859738648, 8.12206906e-08, -0.5107342),
+			Jump = 25,
+			Main = CFrame.new(-504.784607, -7.00197697, 195.516968, -0.997308433, 4.82475659e-09, 0.0733204111, 5.50838486e-09, 1, 9.121635e-09, -0.0733204111, 9.50096091e-09, -0.997308433) + Vector3.new(0, 25, 0)
+		},
+		[3] = {
+			Pos = CFrame.new(-506.302856, -7.00197697, 181.363556, -0.5107342, 4.47635635e-08, 0.859738648, 9.2690847e-08, 1, 2.99721759e-09, -0.859738648, 8.12206906e-08, -0.5107342),
+			Jump = 35,
+			Main = CFrame.new(-504.784607, -7.00197697, 195.516968, -0.997308433, 4.82475659e-09, 0.0733204111, 5.50838486e-09, 1, 9.121635e-09, -0.0733204111, 9.50096091e-09, -0.997308433) + Vector3.new(0, 35, 0)
+		}
+	},
+	[6] = {
+		[1] = {
+			Pos = CFrame.new(-505.14975, -7.00197697, 88.4048538, -0.999908268, 2.32194282e-08, 0.0135425432, 2.49597907e-08, 1, 1.28341668e-07, -0.0135425432, 1.28667907e-07, -0.999908268),
+			Main = CFrame.new(-505.14975, -7.00197697, 88.4048538, -0.999908268, 2.32194282e-08, 0.0135425432, 2.49597907e-08, 1, 1.28341668e-07, -0.0135425432, 1.28667907e-07, -0.999908268)
+		},
+		[2] = {
+			Pos = CFrame.new(-495.53067, -7.00197697, 67.8451614, 0.880077124, -9.26204393e-08, 0.474830776, 1.00403774e-07, 1, 8.96609009e-09, -0.474830776, 3.97839521e-08, 0.880077124),
+			Jump = 25,
+			Main = CFrame.new(-505.14975, -7.00197697, 88.4048538, -0.999908268, 2.32194282e-08, 0.0135425432, 2.49597907e-08, 1, 1.28341668e-07, -0.0135425432, 1.28667907e-07, -0.999908268) + Vector3.new(0, 25, 0)
+		},
+		[3] = {
+			Pos = CFrame.new(-495.53067, -7.00197697, 67.8451614, 0.880077124, -9.26204393e-08, 0.474830776, 1.00403774e-07, 1, 8.96609009e-09, -0.474830776, 3.97839521e-08, 0.880077124),
+			Jump = 35,
+			Main = CFrame.new(-505.14975, -7.00197697, 88.4048538, -0.999908268, 2.32194282e-08, 0.0135425432, 2.49597907e-08, 1, 1.28341668e-07, -0.0135425432, 1.28667907e-07, -0.999908268) + Vector3.new(0, 35, 0)
+		}
+	},
+	[7] = {
+		[1] = {
+			Pos = CFrame.new(-494.081055, -7.00197697, 31.7011547, 0.999845386, 1.16319093e-07, -0.0175832082, -1.16473238e-07, 1, -7.74236231e-09, 0.0175832082, 9.78913839e-09, 0.999845386),
+			Main = CFrame.new(-494.081055, -7.00197697, 31.7011547, 0.999845386, 1.16319093e-07, -0.0175832082, -1.16473238e-07, 1, -7.74236231e-09, 0.0175832082, 9.78913839e-09, 0.999845386)
+		},
+		[2] = {
+			Pos = CFrame.new(-494.681732, -7.00197697, 48.0141296, 0.871817172, -5.35016209e-09, -0.489831418, 4.97770625e-09, 1, -2.06298023e-09, 0.489831418, -6.39695241e-10, 0.871817172),
+			Jump = 25,
+			Main = CFrame.new(-494.081055, -7.00197697, 31.7011547, 0.999845386, 1.16319093e-07, -0.0175832082, -1.16473238e-07, 1, -7.74236231e-09, 0.0175832082, 9.78913839e-09, 0.999845386) + Vector3.new(0, 25, 0)
+		},
+		[3] = {
+			Pos = CFrame.new(-494.681732, -7.00197697, 48.0141296, 0.871817172, -5.35016209e-09, -0.489831418, 4.97770625e-09, 1, -2.06298023e-09, 0.489831418, -6.39695241e-10, 0.871817172),
+			Jump = 35,
+			Main = CFrame.new(-494.081055, -7.00197697, 31.7011547, 0.999845386, 1.16319093e-07, -0.0175832082, -1.16473238e-07, 1, -7.74236231e-09, 0.0175832082, 9.78913839e-09, 0.999845386) + Vector3.new(0, 35, 0)
+		}
+	},
+	[8] = {
+		[1] = {
+			Pos = CFrame.new(-503.103821, -7.00197697, -75.2421646, 0.999555945, -4.28542757e-09, -0.0297970511, 2.06460027e-09, 1, -7.45625428e-08, 0.0297970511, 7.44679127e-08, 0.999555945),
+			Main = CFrame.new(-503.103821, -7.00197697, -75.2421646, 0.999555945, -4.28542757e-09, -0.0297970511, 2.06460027e-09, 1, -7.45625428e-08, 0.0297970511, 7.44679127e-08, 0.999555945),
+		},
+		[2] = {
+			Pos = CFrame.new(-500.816467, -7.00197697, -55.6038704, 0.880135834, -1.05258785e-07, 0.474721909, 6.97626561e-08, 1, 9.23870758e-08, -0.474721909, -4.81953144e-08, 0.880135834),
+			Jump = 25,
+			Main = CFrame.new(-503.103821, -7.00197697, -75.2421646, 0.999555945, -4.28542757e-09, -0.0297970511, 2.06460027e-09, 1, -7.45625428e-08, 0.0297970511, 7.44679127e-08, 0.999555945) + Vector3.new(0, 25, 0),
+		},
+		[3] = {
+			Pos = CFrame.new(-500.816467, -7.00197697, -55.6038704, 0.880135834, -1.05258785e-07, 0.474721909, 6.97626561e-08, 1, 9.23870758e-08, -0.474721909, -4.81953144e-08, 0.880135834),
+			Jump = 35,
+			Main = CFrame.new(-503.103821, -7.00197697, -75.2421646, 0.999555945, -4.28542757e-09, -0.0297970511, 2.06460027e-09, 1, -7.45625428e-08, 0.0297970511, 7.44679127e-08, 0.999555945) + Vector3.new(0, 35, 0),
+		},
+	}
+}
+
+
+local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+
+local function getClosestBase(cf)
+	local lastmag = 350
+	local last = nil
+	for i, p in pairs(cfs) do
+		local z = p[1].Main.Position
+		if (z - cf.Position).Magnitude < lastmag then
+			lastmag = (z - cf.Position).Magnitude
+			last = p
+		end
+	end
+	return last
+end
+
+local PathfindingService = game:GetService("PathfindingService")
+
+local path = PathfindingService:CreatePath(pathParams)
+
+local lastCompute = 0
+local COOLDOWN = 0.1
+
+local itemCount = 0
+local currentSelected = nil
+local selectedGenerationText = ""
+local targetp = nil
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function addButtonPlayer(paren, k,name)
+
+
+	-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll
+	local NewFrame=  Instance.new("Frame", G2L["1"]);
+	NewFrame["AutomaticSize"] = Enum.AutomaticSize.Y;
+	NewFrame["Size"] = UDim2.new(1, -16, 0, 0);
+	NewFrame["Position"] = UDim2.new(0, 8, 0, 32);
+	NewFrame["Name"] = name;
+	NewFrame["BackgroundTransparency"] = 1;
+
+
+	-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.UIListLayout
+	local NewUiListLayout1= Instance.new("UIListLayout",NewFrame);
+	NewUiListLayout1["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+	NewUiListLayout1["Padding"] = UDim.new(0, 8);
+	NewUiListLayout1["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+	-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.UIPadding
+	local uipadding1 = Instance.new("UIPadding",NewFrame);
+	uipadding1["PaddingBottom"] = UDim.new(0, 6);
+
+
+	-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame
+	local newframe1= Instance.new("Frame", NewFrame);
+	newframe1["BackgroundColor3"] = Color3.fromRGB(16, 21, 31);
+	newframe1["Size"] = UDim2.new(1, 0, 0, 38);
+	newframe1["BackgroundTransparency"] = 0.5;
+
+
+	-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.UICorner
+	Instance.new("UICorner", newframe1);
+
+
+
+	-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.UIStroke
+	local UiStroke = Instance.new("UIStroke",newframe1);
+	UiStroke["Transparency"] = 0.9;
+	UiStroke["Color"] = Color3.fromRGB(57, 190, 249);
+
+
+	-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.TextLabel
+	local TextLabel1 = Instance.new("TextLabel", newframe1);
+	TextLabel1["TextSize"] = 14;
+	TextLabel1["TextXAlignment"] = Enum.TextXAlignment.Left;
+	TextLabel1["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+	TextLabel1["TextColor3"] = Color3.fromRGB(242, 246, 250);
+	TextLabel1["BackgroundTransparency"] = 1;
+	TextLabel1["Size"] = UDim2.new(1, -10, 1, 0);
+	TextLabel1["Text"] = k;
+	TextLabel1["Position"] = UDim2.new(0, 10, 0, 0);
+
+
+	-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.TextButton
+	local Button1 = Instance.new("TextButton",newframe1);
+	Button1["BackgroundTransparency"] = 1;
+	Button1["Size"] = UDim2.new(1, 0, 1, 0);
+	Button1["Text"] = [[]];
+
+
+	-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.Frame
+	local newframe2 = Instance.new("Frame",newframe1);
+	newframe2["BackgroundColor3"] = Color3.fromRGB(31, 42, 60);
+	newframe2["Size"] = UDim2.new(0, 40, 0, 20);
+	newframe2["Position"] = UDim2.new(1, -50, 0.5, -10);
+	newframe2["BackgroundTransparency"] = 0.1;
+
+
+	-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.Frame.UICorner
+	local uicorner3 = Instance.new("UICorner", newframe2);
+	uicorner3["CornerRadius"] = UDim.new(1, 0);
+
+
+	-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.Frame.Frame
+	local newframe4 = Instance.new("Frame",newframe2);
+	newframe4["BackgroundColor3"] = Color3.fromRGB(242, 246, 250);
+	newframe4["Size"] = UDim2.new(0, 16, 0, 16);
+	newframe4["Position"] = UDim2.new(0, 2, 0.5, -8);
+
+
+	-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.Frame.Frame.UICorner
+	local uicorner4 = Instance.new("UICorner", newframe2);
+	uicorner4["CornerRadius"] = UDim.new(1, 0);
+
+
+
+
+
+
+
+	return NewFrame
+
+
+
+
+
+end
+
+
+
+
+local function createMovementButton(parent, frameName, buttonText)
+	-- ה-Container הראשי
+	local mainFrame = Instance.new("Frame")
+	mainFrame.Name = frameName
+	mainFrame.BackgroundColor3 = Color3.fromRGB(16, 21, 31)
+	mainFrame.Size = UDim2.new(1, 0, 0, 38)
+	mainFrame.BackgroundTransparency = 0.5
+	mainFrame.Parent = parent -- הגדרת הורה בסוף
+
+	-- UICorner למסגרת
+	local mainCorner = Instance.new("UICorner")
+	mainCorner.Parent = mainFrame
+
+	-- UIStroke
+	local mainStroke = Instance.new("UIStroke")
+	mainStroke.Transparency = 0.9
+	mainStroke.Color = Color3.fromRGB(57, 190, 249)
+	mainStroke.Parent = mainFrame
+
+	-- טקסט הכפתור
+	local label = Instance.new("TextLabel")
+	label.TextSize = 14
+	label.TextXAlignment = Enum.TextXAlignment.Left
+	label.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+	label.TextColor3 = Color3.fromRGB(242, 246, 250)
+	label.BackgroundTransparency = 1
+	label.Size = UDim2.new(1, -10, 1, 0)
+	label.Text = buttonText
+	label.Position = UDim2.new(0, 10, 0, 0)
+	label.Parent = mainFrame
+
+	-- הכפתור השקוף ללחיצה
+	local textButton = Instance.new("TextButton")
+	textButton.BackgroundTransparency = 1
+	textButton.Size = UDim2.new(1, 0, 1, 0)
+	textButton.Text = ""
+	textButton.Parent = mainFrame
+
+	-- עיצוב של ה-Toggle (המתג בצד ימין)
+	local toggleBG = Instance.new("Frame")
+	toggleBG.BackgroundColor3 = Color3.fromRGB(31, 42, 60)
+	toggleBG.Size = UDim2.new(0, 40, 0, 20)
+	toggleBG.Position = UDim2.new(1, -50, 0.5, -10)
+	toggleBG.BackgroundTransparency = 0.1
+	toggleBG.Parent = mainFrame
+
+	local toggleCorner = Instance.new("UICorner")
+	toggleCorner.CornerRadius = UDim.new(1, 0)
+	toggleCorner.Parent = toggleBG
+
+	-- העיגול הפנימי של ה-Toggle
+	local toggleCircle = Instance.new("Frame")
+	toggleCircle.BackgroundColor3 = Color3.fromRGB(242, 246, 250)
+	toggleCircle.Size = UDim2.new(0, 16, 0, 16)
+	toggleCircle.Position = UDim2.new(0, 2, 0.5, -8)
+	toggleCircle.Parent = toggleBG
+
+	local circleCorner = Instance.new("UICorner")
+	circleCorner.CornerRadius = UDim.new(1, 0)
+	circleCorner.Parent = toggleCircle
+
+	return textButton
+end
+
+
+
+
+
+
+
+
+
+
+-- StarterGui.ChilliLibUI.MainBase
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(32, 48, 77);
+G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2"]["Size"] = UDim2.new(0, 495, 0, 340);
+G2L["2"]["Position"] = UDim2.new(0.59777, 0, 0.48108, 0);
+G2L["2"]["Name"] = [[MainBase]];
+Instance.new("UIDragDetector",G2L["2"])
+
+-- StarterGui.ChilliLibUI.MainBase.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+G2L["3"]["CornerRadius"] = UDim.new(0, 20);
+
+
+-- StarterGui.ChilliLibUI.MainBase.UIGradient
+G2L["4"] = Instance.new("UIGradient", G2L["2"]);
+G2L["4"]["Rotation"] = 35;
+G2L["4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),ColorSequenceKeypoint.new(0.235, Color3.fromRGB(179, 192, 205)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.UIStroke
+G2L["5"] = Instance.new("UIStroke", G2L["2"]);
+G2L["5"]["Transparency"] = 0.8;
+G2L["5"]["Thickness"] = 3;
+G2L["5"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["5"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.UIStroke
+G2L["6"] = Instance.new("UIStroke", G2L["2"]);
+G2L["6"]["Transparency"] = 0.5;
+G2L["6"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["6"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.TopBar
+G2L["7"] = Instance.new("Frame", G2L["2"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(26, 33, 49);
+G2L["7"]["Size"] = UDim2.new(1, -14, 0, 32);
+G2L["7"]["Position"] = UDim2.new(0, 7, 0, 7);
+G2L["7"]["Name"] = [[TopBar]];
+G2L["7"]["BackgroundTransparency"] = 0.3;
+
+
+-- StarterGui.ChilliLibUI.MainBase.TopBar.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["7"]);
+G2L["8"]["CornerRadius"] = UDim.new(0, 12);
+
+
+-- StarterGui.ChilliLibUI.MainBase.TopBar.TextLabel
+G2L["9"] = Instance.new("TextLabel", G2L["7"]);
+G2L["9"]["TextWrapped"] = true;
+G2L["9"]["TextSize"] = 18;
+G2L["9"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["9"]["TextScaled"] = true;
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["9"]["TextColor3"] = Color3.fromRGB(242, 246, 250);
+G2L["9"]["BackgroundTransparency"] = 1;
+G2L["9"]["Size"] = UDim2.new(1.00693, -150, 1, 0);
+G2L["9"]["Text"] = [[Nice Hub Premium NEW VERSION BY SOMEONE]];
+G2L["9"]["Position"] = UDim2.new(0, 14, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.TopBar.TextLabel.UIGradient
+G2L["a"] = Instance.new("UIGradient", G2L["9"]);
+G2L["a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(35, 212, 239)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(100, 103, 242))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.TopBar.TextButton
+G2L["b"] = Instance.new("TextButton", G2L["7"]);
+G2L["b"]["TextSize"] = 14;
+G2L["b"]["TextColor3"] = Color3.fromRGB(240, 69, 69);
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(31, 42, 60);
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["b"]["Size"] = UDim2.new(0, 24, 0, 24);
+G2L["b"]["Text"] = [[X]];
+G2L["b"]["Position"] = UDim2.new(1, -30, 0.5, -12);
+
+
+-- StarterGui.ChilliLibUI.MainBase.TopBar.TextButton.UICorner
+G2L["c"] = Instance.new("UICorner", G2L["b"]);
+
+
+
+-- StarterGui.ChilliLibUI.MainBase.TopBar.TextButton.UIStroke
+G2L["d"] = Instance.new("UIStroke", G2L["b"]);
+G2L["d"]["Transparency"] = 0.7;
+G2L["d"]["Color"] = Color3.fromRGB(57, 190, 249);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame
+G2L["e"] = Instance.new("Frame", G2L["2"]);
+G2L["e"]["Size"] = UDim2.new(1, -20, 1, -50);
+G2L["e"]["Position"] = UDim2.new(0, 10, 0, 45);
+G2L["e"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame
+G2L["f"] = Instance.new("ScrollingFrame", G2L["e"]);
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["CanvasSize"] = UDim2.new(0, 0, 0, 55);
+G2L["f"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+G2L["f"]["Size"] = UDim2.new(0, 105, 1, 0);
+G2L["f"]["ScrollBarThickness"] = 2;
+G2L["f"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.UIListLayout
+G2L["10"] = Instance.new("UIListLayout", G2L["f"]);
+G2L["10"]["Padding"] = UDim.new(0, 6);
+G2L["10"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Stealer
+G2L["11"] = Instance.new("TextButton", G2L["f"]);
+G2L["11"]["AutoButtonColor"] = false;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(31, 42, 60);
+G2L["11"]["BackgroundTransparency"] = 1;
+G2L["11"]["Size"] = UDim2.new(1, -4, 0, 32);
+G2L["11"]["Text"] = [[]];
+G2L["11"]["Name"] = [[Stealer]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Stealer.UICorner
+G2L["12"] = Instance.new("UICorner", G2L["11"]);
+G2L["12"]["CornerRadius"] = UDim.new(0, 10);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Stealer.UIStroke
+G2L["13"] = Instance.new("UIStroke", G2L["11"]);
+G2L["13"]["Transparency"] = 1;
+G2L["13"]["Color"] = Color3.fromRGB(53, 181, 231);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Stealer.Frame
+G2L["14"] = Instance.new("Frame", G2L["11"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["14"]["Size"] = UDim2.new(0, 3, 1, -6);
+G2L["14"]["Position"] = UDim2.new(0, 1, 0, 3);
+G2L["14"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Stealer.UIGradient
+G2L["15"] = Instance.new("UIGradient", G2L["11"]);
+G2L["15"]["Enabled"] = false;
+G2L["15"]["Rotation"] = 35;
+G2L["15"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),ColorSequenceKeypoint.new(0.550, Color3.fromRGB(22, 31, 48)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Stealer.ImageLabel
+G2L["16"] = Instance.new("ImageLabel", G2L["11"]);
+G2L["16"]["ImageColor3"] = Color3.fromRGB(149, 164, 185);
+G2L["16"]["Image"] = [[rbxassetid://]];
+G2L["16"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["16"]["BackgroundTransparency"] = 1;
+G2L["16"]["Position"] = UDim2.new(0, 8, 0.5, -9);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Stealer.TextLabel
+G2L["17"] = Instance.new("TextLabel", G2L["11"]);
+G2L["17"]["TextSize"] = 15;
+G2L["17"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["17"]["TextColor3"] = Color3.fromRGB(149, 164, 185);
+G2L["17"]["BackgroundTransparency"] = 1;
+G2L["17"]["Size"] = UDim2.new(1, -32, 1, 0);
+G2L["17"]["Text"] = [[Stealer]];
+G2L["17"]["Position"] = UDim2.new(0, 30, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Helper
+G2L["18"] = Instance.new("TextButton", G2L["f"]);
+G2L["18"]["AutoButtonColor"] = false;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(31, 42, 60);
+G2L["18"]["BackgroundTransparency"] = 1;
+G2L["18"]["Size"] = UDim2.new(1, -4, 0, 32);
+G2L["18"]["Text"] = [[]];
+G2L["18"]["Name"] = [[Helper]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Helper.UICorner
+G2L["19"] = Instance.new("UICorner", G2L["18"]);
+G2L["19"]["CornerRadius"] = UDim.new(0, 10);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Helper.UIStroke
+G2L["1a"] = Instance.new("UIStroke", G2L["18"]);
+G2L["1a"]["Transparency"] = 1;
+G2L["1a"]["Color"] = Color3.fromRGB(53, 181, 231);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Helper.Frame
+G2L["1b"] = Instance.new("Frame", G2L["18"]);
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["1b"]["Size"] = UDim2.new(0, 3, 1, -6);
+G2L["1b"]["Position"] = UDim2.new(0, 1, 0, 3);
+G2L["1b"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Helper.UIGradient
+G2L["1c"] = Instance.new("UIGradient", G2L["18"]);
+G2L["1c"]["Enabled"] = false;
+G2L["1c"]["Rotation"] = 35;
+G2L["1c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),ColorSequenceKeypoint.new(0.550, Color3.fromRGB(22, 31, 48)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Helper.ImageLabel
+G2L["1d"] = Instance.new("ImageLabel", G2L["18"]);
+G2L["1d"]["ImageColor3"] = Color3.fromRGB(149, 164, 185);
+G2L["1d"]["Image"] = [[rbxassetid://]];
+G2L["1d"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["1d"]["BackgroundTransparency"] = 1;
+G2L["1d"]["Position"] = UDim2.new(0, 8, 0.5, -9);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Helper.TextLabel
+G2L["1e"] = Instance.new("TextLabel", G2L["18"]);
+G2L["1e"]["TextSize"] = 15;
+G2L["1e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1e"]["TextColor3"] = Color3.fromRGB(149, 164, 185);
+G2L["1e"]["BackgroundTransparency"] = 1;
+G2L["1e"]["Size"] = UDim2.new(1, -32, 1, 0);
+G2L["1e"]["Text"] = [[Helper]];
+G2L["1e"]["Position"] = UDim2.new(0, 30, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Player
+G2L["1f"] = Instance.new("TextButton", G2L["f"]);
+G2L["1f"]["AutoButtonColor"] = false;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(31, 42, 60);
+G2L["1f"]["BackgroundTransparency"] = 1;
+G2L["1f"]["Size"] = UDim2.new(1, -4, 0, 32);
+G2L["1f"]["Text"] = [[]];
+G2L["1f"]["Name"] = [[Player]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Player.UICorner
+G2L["20"] = Instance.new("UICorner", G2L["1f"]);
+G2L["20"]["CornerRadius"] = UDim.new(0, 10);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Player.UIStroke
+G2L["21"] = Instance.new("UIStroke", G2L["1f"]);
+G2L["21"]["Transparency"] = 1;
+G2L["21"]["Color"] = Color3.fromRGB(53, 181, 231);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Player.Frame
+G2L["22"] = Instance.new("Frame", G2L["1f"]);
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["22"]["Size"] = UDim2.new(0, 3, 1, -6);
+G2L["22"]["Position"] = UDim2.new(0, 1, 0, 3);
+G2L["22"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Player.UIGradient
+G2L["23"] = Instance.new("UIGradient", G2L["1f"]);
+G2L["23"]["Enabled"] = false;
+G2L["23"]["Rotation"] = 35;
+G2L["23"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),ColorSequenceKeypoint.new(0.550, Color3.fromRGB(22, 31, 48)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Player.ImageLabel
+G2L["24"] = Instance.new("ImageLabel", G2L["1f"]);
+G2L["24"]["ImageColor3"] = Color3.fromRGB(149, 164, 185);
+G2L["24"]["Image"] = [[rbxassetid://]];
+G2L["24"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["24"]["BackgroundTransparency"] = 1;
+G2L["24"]["Position"] = UDim2.new(0, 8, 0.5, -9);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Player.TextLabel
+G2L["25"] = Instance.new("TextLabel", G2L["1f"]);
+G2L["25"]["TextSize"] = 15;
+G2L["25"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["25"]["TextColor3"] = Color3.fromRGB(149, 164, 185);
+G2L["25"]["BackgroundTransparency"] = 1;
+G2L["25"]["Size"] = UDim2.new(1, -32, 1, 0);
+G2L["25"]["Text"] = [[Player]];
+G2L["25"]["Position"] = UDim2.new(0, 30, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Server
+G2L["26"] = Instance.new("TextButton", G2L["f"]);
+G2L["26"]["AutoButtonColor"] = false;
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(31, 42, 60);
+G2L["26"]["BackgroundTransparency"] = 1;
+G2L["26"]["Size"] = UDim2.new(1, -4, 0, 32);
+G2L["26"]["Text"] = [[]];
+G2L["26"]["Name"] = [[Server]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Server.UICorner
+G2L["27"] = Instance.new("UICorner", G2L["26"]);
+G2L["27"]["CornerRadius"] = UDim.new(0, 10);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Server.UIStroke
+G2L["28"] = Instance.new("UIStroke", G2L["26"]);
+G2L["28"]["Transparency"] = 1;
+G2L["28"]["Color"] = Color3.fromRGB(53, 181, 231);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Server.Frame
+G2L["29"] = Instance.new("Frame", G2L["26"]);
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["29"]["Size"] = UDim2.new(0, 3, 1, -6);
+G2L["29"]["Position"] = UDim2.new(0, 1, 0, 3);
+G2L["29"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Server.UIGradient
+G2L["2a"] = Instance.new("UIGradient", G2L["26"]);
+G2L["2a"]["Enabled"] = false;
+G2L["2a"]["Rotation"] = 35;
+G2L["2a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),ColorSequenceKeypoint.new(0.550, Color3.fromRGB(22, 31, 48)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Server.ImageLabel
+G2L["2b"] = Instance.new("ImageLabel", G2L["26"]);
+G2L["2b"]["ImageColor3"] = Color3.fromRGB(149, 164, 185);
+G2L["2b"]["Image"] = [[rbxassetid://]];
+G2L["2b"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["2b"]["BackgroundTransparency"] = 1;
+G2L["2b"]["Position"] = UDim2.new(0, 8, 0.5, -9);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Server.TextLabel
+G2L["2c"] = Instance.new("TextLabel", G2L["26"]);
+G2L["2c"]["TextSize"] = 15;
+G2L["2c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["2c"]["TextColor3"] = Color3.fromRGB(149, 164, 185);
+G2L["2c"]["BackgroundTransparency"] = 1;
+G2L["2c"]["Size"] = UDim2.new(1, -32, 1, 0);
+G2L["2c"]["Text"] = [[Server]];
+G2L["2c"]["Position"] = UDim2.new(0, 30, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Esp
+G2L["2d"] = Instance.new("TextButton", G2L["f"]);
+G2L["2d"]["AutoButtonColor"] = false;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(31, 42, 60);
+G2L["2d"]["BackgroundTransparency"] = 1;
+G2L["2d"]["Size"] = UDim2.new(1, -4, 0, 32);
+G2L["2d"]["Text"] = [[Esp]];
+G2L["2d"]["Name"] = [[Esp]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Esp.UICorner
+G2L["2e"] = Instance.new("UICorner", G2L["2d"]);
+G2L["2e"]["CornerRadius"] = UDim.new(0, 10);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Esp.UIStroke
+G2L["2f"] = Instance.new("UIStroke", G2L["2d"]);
+G2L["2f"]["Transparency"] = 1;
+G2L["2f"]["Color"] = Color3.fromRGB(53, 181, 231);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Esp.Frame
+G2L["30"] = Instance.new("Frame", G2L["2d"]);
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["30"]["Size"] = UDim2.new(0, 3, 1, -6);
+G2L["30"]["Position"] = UDim2.new(0, 1, 0, 3);
+G2L["30"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Esp.UIGradient
+G2L["31"] = Instance.new("UIGradient", G2L["2d"]);
+G2L["31"]["Enabled"] = false;
+G2L["31"]["Rotation"] = 35;
+G2L["31"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),ColorSequenceKeypoint.new(0.550, Color3.fromRGB(22, 31, 48)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Esp.ImageLabel
+G2L["32"] = Instance.new("ImageLabel", G2L["2d"]);
+G2L["32"]["ImageColor3"] = Color3.fromRGB(149, 164, 185);
+G2L["32"]["Image"] = [[rbxassetid://]];
+G2L["32"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["32"]["BackgroundTransparency"] = 1;
+G2L["32"]["Position"] = UDim2.new(0, 8, 0.5, -9);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Esp.TextLabel
+G2L["33"] = Instance.new("TextLabel", G2L["2d"]);
+G2L["33"]["TextSize"] = 15;
+G2L["33"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["33"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["33"]["TextColor3"] = Color3.fromRGB(149, 164, 185);
+G2L["33"]["BackgroundTransparency"] = 1;
+G2L["33"]["Size"] = UDim2.new(1, -32, 1, 0);
+G2L["33"]["Text"] = [[Esp]];
+G2L["33"]["Position"] = UDim2.new(0, 30, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Priority
+G2L["34"] = Instance.new("TextButton", G2L["f"]);
+G2L["34"]["AutoButtonColor"] = false;
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(31, 42, 60);
+G2L["34"]["BackgroundTransparency"] = 1;
+G2L["34"]["Size"] = UDim2.new(1, -4, 0, 32);
+G2L["34"]["Text"] = [[Esp]];
+G2L["34"]["Name"] = [[Priority]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Priority.UICorner
+G2L["35"] = Instance.new("UICorner", G2L["34"]);
+G2L["35"]["CornerRadius"] = UDim.new(0, 10);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Priority.UIStroke
+G2L["36"] = Instance.new("UIStroke", G2L["34"]);
+G2L["36"]["Transparency"] = 1;
+G2L["36"]["Color"] = Color3.fromRGB(53, 181, 231);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Priority.Frame
+G2L["37"] = Instance.new("Frame", G2L["34"]);
+G2L["37"]["BorderSizePixel"] = 0;
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["37"]["Size"] = UDim2.new(0, 3, 1, -6);
+G2L["37"]["Position"] = UDim2.new(0, 1, 0, 3);
+G2L["37"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Priority.UIGradient
+G2L["38"] = Instance.new("UIGradient", G2L["34"]);
+G2L["38"]["Enabled"] = false;
+G2L["38"]["Rotation"] = 35;
+G2L["38"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),ColorSequenceKeypoint.new(0.550, Color3.fromRGB(22, 31, 48)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Priority.ImageLabel
+G2L["39"] = Instance.new("ImageLabel", G2L["34"]);
+G2L["39"]["ImageColor3"] = Color3.fromRGB(149, 164, 185);
+G2L["39"]["Image"] = [[rbxassetid://]];
+G2L["39"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["39"]["BackgroundTransparency"] = 1;
+G2L["39"]["Position"] = UDim2.new(0, 8, 0.5, -9);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Priority.TextLabel
+G2L["3a"] = Instance.new("TextLabel", G2L["34"]);
+G2L["3a"]["TextSize"] = 15;
+G2L["3a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["3a"]["TextColor3"] = Color3.fromRGB(149, 164, 185);
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Size"] = UDim2.new(1, -32, 1, 0);
+G2L["3a"]["Text"] = [[Priority]];
+G2L["3a"]["Position"] = UDim2.new(0, 30, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Duels
+G2L["3b"] = Instance.new("TextButton", G2L["f"]);
+G2L["3b"]["AutoButtonColor"] = false;
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(31, 42, 60);
+G2L["3b"]["BackgroundTransparency"] = 1;
+G2L["3b"]["Size"] = UDim2.new(1, -4, 0, 32);
+G2L["3b"]["Text"] = [[Esp]];
+G2L["3b"]["Name"] = [[Duels]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Duels.UICorner
+G2L["3c"] = Instance.new("UICorner", G2L["3b"]);
+G2L["3c"]["CornerRadius"] = UDim.new(0, 10);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Duels.UIStroke
+G2L["3d"] = Instance.new("UIStroke", G2L["3b"]);
+G2L["3d"]["Transparency"] = 1;
+G2L["3d"]["Color"] = Color3.fromRGB(53, 181, 231);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Duels.Frame
+G2L["3e"] = Instance.new("Frame", G2L["3b"]);
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["3e"]["Size"] = UDim2.new(0, 3, 1, -6);
+G2L["3e"]["Position"] = UDim2.new(0, 1, 0, 3);
+G2L["3e"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Duels.UIGradient
+G2L["3f"] = Instance.new("UIGradient", G2L["3b"]);
+G2L["3f"]["Enabled"] = false;
+G2L["3f"]["Rotation"] = 35;
+G2L["3f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),ColorSequenceKeypoint.new(0.550, Color3.fromRGB(22, 31, 48)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Duels.ImageLabel
+G2L["40"] = Instance.new("ImageLabel", G2L["3b"]);
+G2L["40"]["ImageColor3"] = Color3.fromRGB(149, 164, 185);
+G2L["40"]["Image"] = [[rbxassetid://]];
+G2L["40"]["Size"] = UDim2.new(0, 18, 0, 18);
+G2L["40"]["BackgroundTransparency"] = 1;
+G2L["40"]["Position"] = UDim2.new(0, 8, 0.5, -9);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.ScrollingFrame.Duels.TextLabel
+G2L["41"] = Instance.new("TextLabel", G2L["3b"]);
+G2L["41"]["TextSize"] = 15;
+G2L["41"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["41"]["TextColor3"] = Color3.fromRGB(149, 164, 185);
+G2L["41"]["BackgroundTransparency"] = 1;
+G2L["41"]["Size"] = UDim2.new(1, -32, 1, 0);
+G2L["41"]["Text"] = [[Duels]];
+G2L["41"]["Position"] = UDim2.new(0, 30, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.m
+G2L["42"] = Instance.new("Frame", G2L["e"]);
+G2L["42"]["BorderSizePixel"] = 0;
+G2L["42"]["BackgroundColor3"] = Color3.fromRGB(57, 190, 249);
+G2L["42"]["Size"] = UDim2.new(0, 1, 1, 0);
+G2L["42"]["Position"] = UDim2.new(0, 115, 0, 0);
+G2L["42"]["Name"] = [[m]];
+G2L["42"]["BackgroundTransparency"] = 0.8;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame
+G2L["43"] = Instance.new("Frame", G2L["e"]);
+G2L["43"]["ClipsDescendants"] = true;
+G2L["43"]["Size"] = UDim2.new(1, -125, 1, 0);
+G2L["43"]["Position"] = UDim2.new(0, 125, 0, 0);
+G2L["43"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer
+G2L["44"] = Instance.new("ScrollingFrame", G2L["43"]);
+G2L["44"]["Visible"] = false;
+G2L["44"]["BorderSizePixel"] = 0;
+G2L["44"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+G2L["44"]["Name"] = [[Stealer]];
+G2L["44"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+G2L["44"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["44"]["ScrollBarImageColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["44"]["ScrollBarThickness"] = 2;
+G2L["44"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.UIListLayout
+G2L["45"] = Instance.new("UIListLayout", G2L["44"]);
+G2L["45"]["Padding"] = UDim.new(0, 12);
+G2L["45"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.UIPadding
+G2L["46"] = Instance.new("UIPadding", G2L["44"]);
+G2L["46"]["PaddingTop"] = UDim.new(0, 4);
+G2L["46"]["PaddingRight"] = UDim.new(0, 4);
+G2L["46"]["PaddingLeft"] = UDim.new(0, 4);
+G2L["46"]["PaddingBottom"] = UDim.new(0, 10);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.Frame
+G2L["47"] = Instance.new("Frame", G2L["44"]);
+G2L["47"]["BorderSizePixel"] = 0;
+G2L["47"]["BackgroundColor3"] = Color3.fromRGB(17, 25, 40);
+G2L["47"]["ClipsDescendants"] = true;
+G2L["47"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["47"]["Size"] = UDim2.new(1, -2, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.Frame.UICorner
+G2L["48"] = Instance.new("UICorner", G2L["47"]);
+G2L["48"]["CornerRadius"] = UDim.new(0, 12);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.Frame.UIGradient
+G2L["49"] = Instance.new("UIGradient", G2L["47"]);
+G2L["49"]["Rotation"] = 35;
+G2L["49"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),ColorSequenceKeypoint.new(0.550, Color3.fromRGB(22, 31, 48)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.Frame.UIStroke
+G2L["4a"] = Instance.new("UIStroke", G2L["47"]);
+G2L["4a"]["Transparency"] = 0.8;
+G2L["4a"]["Thickness"] = 3;
+G2L["4a"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["4a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.Frame.UIStroke
+G2L["4b"] = Instance.new("UIStroke", G2L["47"]);
+G2L["4b"]["Transparency"] = 0.5;
+G2L["4b"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["4b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.Frame.UIPadding
+G2L["4c"] = Instance.new("UIPadding", G2L["47"]);
+G2L["4c"]["PaddingTop"] = UDim.new(0, 4);
+G2L["4c"]["PaddingRight"] = UDim.new(0, 2);
+G2L["4c"]["PaddingLeft"] = UDim.new(0, 2);
+G2L["4c"]["PaddingBottom"] = UDim.new(0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.Frame.TextButton
+G2L["4d"] = Instance.new("TextButton", G2L["47"]);
+G2L["4d"]["BackgroundTransparency"] = 1;
+G2L["4d"]["Size"] = UDim2.new(1, -16, 0, 24);
+G2L["4d"]["Text"] = [[]];
+G2L["4d"]["Position"] = UDim2.new(0, 8, 0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.Frame.TextButton.TextLabel
+G2L["4e"] = Instance.new("TextLabel", G2L["4d"]);
+G2L["4e"]["TextSize"] = 16;
+G2L["4e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4e"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["4e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4e"]["BackgroundTransparency"] = 1;
+G2L["4e"]["Size"] = UDim2.new(1, -20, 1, 0);
+G2L["4e"]["Text"] = [[Stealer]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.Frame.TextButton.TextLabel.UIGradient
+G2L["4f"] = Instance.new("UIGradient", G2L["4e"]);
+G2L["4f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(35, 212, 239)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.Frame.TextButton.TextLabel
+G2L["50"] = Instance.new("TextLabel", G2L["4d"]);
+G2L["50"]["TextSize"] = 12;
+G2L["50"]["TextColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["50"]["BackgroundTransparency"] = 1;
+G2L["50"]["Size"] = UDim2.new(0, 20, 1, 0);
+G2L["50"]["Text"] = [[▼]];
+G2L["50"]["Position"] = UDim2.new(1, -20, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.Frame.ContentHolder
+G2L["51"] = Instance.new("Frame", G2L["47"]);
+G2L["51"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["51"]["Size"] = UDim2.new(1, -16, 0, 0);
+G2L["51"]["Position"] = UDim2.new(0, 8, 0, 32);
+G2L["51"]["Name"] = [[ContentHolder]];
+G2L["51"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.Frame.ContentHolder.UIListLayout
+G2L["52"] = Instance.new("UIListLayout", G2L["51"]);
+G2L["52"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["52"]["Padding"] = UDim.new(0, 8);
+G2L["52"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Stealer.Frame.ContentHolder.UIPadding
+G2L["53"] = Instance.new("UIPadding", G2L["51"]);
+G2L["53"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper
+G2L["c9"] = Instance.new("ScrollingFrame", G2L["43"]);
+G2L["c9"]["Visible"] = false;
+G2L["c9"]["BorderSizePixel"] = 0;
+G2L["c9"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+G2L["c9"]["Name"] = [[Helper]];
+G2L["c9"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+G2L["c9"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["c9"]["ScrollBarImageColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["c9"]["ScrollBarThickness"] = 2;
+G2L["c9"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper.UIListLayout
+G2L["ca"] = Instance.new("UIListLayout", G2L["c9"]);
+G2L["ca"]["Padding"] = UDim.new(0, 12);
+G2L["ca"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper.UIPadding
+G2L["cb"] = Instance.new("UIPadding", G2L["c9"]);
+G2L["cb"]["PaddingTop"] = UDim.new(0, 4);
+G2L["cb"]["PaddingRight"] = UDim.new(0, 4);
+G2L["cb"]["PaddingLeft"] = UDim.new(0, 4);
+G2L["cb"]["PaddingBottom"] = UDim.new(0, 10);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper.Utility
+G2L["cc"] = Instance.new("Frame", G2L["c9"]);
+G2L["cc"]["BorderSizePixel"] = 0;
+G2L["cc"]["BackgroundColor3"] = Color3.fromRGB(17, 25, 40);
+G2L["cc"]["ClipsDescendants"] = true;
+G2L["cc"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["cc"]["Size"] = UDim2.new(1, -2, 0, 0);
+G2L["cc"]["Name"] = [[Utility]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper.Utility.UICorner
+G2L["cd"] = Instance.new("UICorner", G2L["cc"]);
+G2L["cd"]["CornerRadius"] = UDim.new(0, 12);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper.Utility.UIStroke
+G2L["ce"] = Instance.new("UIStroke", G2L["cc"]);
+G2L["ce"]["Transparency"] = 0.8;
+G2L["ce"]["Thickness"] = 3;
+G2L["ce"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["ce"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper.Utility.UIStroke
+G2L["cf"] = Instance.new("UIStroke", G2L["cc"]);
+G2L["cf"]["Transparency"] = 0.5;
+G2L["cf"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["cf"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper.Utility.UIPadding
+G2L["d0"] = Instance.new("UIPadding", G2L["cc"]);
+G2L["d0"]["PaddingTop"] = UDim.new(0, 4);
+G2L["d0"]["PaddingRight"] = UDim.new(0, 2);
+G2L["d0"]["PaddingLeft"] = UDim.new(0, 2);
+G2L["d0"]["PaddingBottom"] = UDim.new(0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper.Utility.TextButton
+G2L["d1"] = Instance.new("TextButton", G2L["cc"]);
+G2L["d1"]["BackgroundTransparency"] = 1;
+G2L["d1"]["Size"] = UDim2.new(1, -16, 0, 24);
+G2L["d1"]["Text"] = [[]];
+G2L["d1"]["Position"] = UDim2.new(0, 8, 0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper.Utility.TextButton.TextLabel
+G2L["d2"] = Instance.new("TextLabel", G2L["d1"]);
+G2L["d2"]["TextSize"] = 16;
+G2L["d2"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["d2"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["d2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d2"]["BackgroundTransparency"] = 1;
+G2L["d2"]["Size"] = UDim2.new(1, -20, 1, 0);
+G2L["d2"]["Text"] = [[Utility]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper.Utility.TextButton.TextLabel.UIGradient
+G2L["d3"] = Instance.new("UIGradient", G2L["d2"]);
+G2L["d3"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(35, 212, 239)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper.Utility.TextButton.TextLabel
+G2L["d4"] = Instance.new("TextLabel", G2L["d1"]);
+G2L["d4"]["TextSize"] = 12;
+G2L["d4"]["TextColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["d4"]["BackgroundTransparency"] = 1;
+G2L["d4"]["Size"] = UDim2.new(0, 20, 1, 0);
+G2L["d4"]["Text"] = [[▼]];
+G2L["d4"]["Position"] = UDim2.new(1, -20, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper.Utility.ContentHolder
+G2L["d5"] = Instance.new("Frame", G2L["cc"]);
+G2L["d5"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["d5"]["Size"] = UDim2.new(1, -16, 0, 0);
+G2L["d5"]["Position"] = UDim2.new(0, 8, 0, 32);
+G2L["d5"]["Name"] = [[ContentHolder]];
+G2L["d5"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper.Utility.ContentHolder.UIListLayout
+G2L["d6"] = Instance.new("UIListLayout", G2L["d5"]);
+G2L["d6"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["d6"]["Padding"] = UDim.new(0, 8);
+G2L["d6"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Helper.Utility.ContentHolder.UIPadding
+G2L["d7"] = Instance.new("UIPadding", G2L["d5"]);
+G2L["d7"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player
+G2L["f3"] = Instance.new("ScrollingFrame", G2L["43"]);
+G2L["f3"]["Visible"] = false;
+G2L["f3"]["BorderSizePixel"] = 0;
+G2L["f3"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+G2L["f3"]["Name"] = [[Player]];
+G2L["f3"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+G2L["f3"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["f3"]["ScrollBarImageColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["f3"]["ScrollBarThickness"] = 2;
+G2L["f3"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.UIListLayout
+G2L["f4"] = Instance.new("UIListLayout", G2L["f3"]);
+G2L["f4"]["Padding"] = UDim.new(0, 12);
+G2L["f4"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.UIPadding
+G2L["f5"] = Instance.new("UIPadding", G2L["f3"]);
+G2L["f5"]["PaddingTop"] = UDim.new(0, 4);
+G2L["f5"]["PaddingRight"] = UDim.new(0, 4);
+G2L["f5"]["PaddingLeft"] = UDim.new(0, 4);
+G2L["f5"]["PaddingBottom"] = UDim.new(0, 10);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo
+G2L["f6"] = Instance.new("Frame", G2L["f3"]);
+G2L["f6"]["BorderSizePixel"] = 0;
+G2L["f6"]["BackgroundColor3"] = Color3.fromRGB(17, 25, 40);
+G2L["f6"]["ClipsDescendants"] = true;
+G2L["f6"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["f6"]["Size"] = UDim2.new(1, -2, 0, 0);
+G2L["f6"]["Name"] = [[Playerinfo]];
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.UICorner
+G2L["f7"] = Instance.new("UICorner", G2L["f6"]);
+G2L["f7"]["CornerRadius"] = UDim.new(0, 12);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.UIStroke
+G2L["f8"] = Instance.new("UIStroke", G2L["f6"]);
+G2L["f8"]["Transparency"] = 0.8;
+G2L["f8"]["Thickness"] = 3;
+G2L["f8"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["f8"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.UIStroke
+G2L["f9"] = Instance.new("UIStroke", G2L["f6"]);
+G2L["f9"]["Transparency"] = 0.5;
+G2L["f9"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["f9"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.UIPadding
+G2L["fa"] = Instance.new("UIPadding", G2L["f6"]);
+G2L["fa"]["PaddingTop"] = UDim.new(0, 4);
+G2L["fa"]["PaddingRight"] = UDim.new(0, 2);
+G2L["fa"]["PaddingLeft"] = UDim.new(0, 2);
+G2L["fa"]["PaddingBottom"] = UDim.new(0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.TextButton
+G2L["fb"] = Instance.new("TextButton", G2L["f6"]);
+G2L["fb"]["BackgroundTransparency"] = 1;
+G2L["fb"]["Size"] = UDim2.new(1, -16, 0, 24);
+G2L["fb"]["Text"] = [[]];
+G2L["fb"]["Position"] = UDim2.new(0, 8, 0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.TextButton.TextLabel
+G2L["fc"] = Instance.new("TextLabel", G2L["fb"]);
+G2L["fc"]["TextSize"] = 16;
+G2L["fc"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["fc"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["fc"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["fc"]["BackgroundTransparency"] = 1;
+G2L["fc"]["Size"] = UDim2.new(1, -20, 1, 0);
+G2L["fc"]["Text"] = [[Player]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.TextButton.TextLabel.UIGradient
+G2L["fd"] = Instance.new("UIGradient", G2L["fc"]);
+G2L["fd"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(35, 212, 239)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.TextButton.TextLabel
+G2L["fe"] = Instance.new("TextLabel", G2L["fb"]);
+G2L["fe"]["TextSize"] = 12;
+G2L["fe"]["TextColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["fe"]["BackgroundTransparency"] = 1;
+G2L["fe"]["Size"] = UDim2.new(0, 20, 1, 0);
+G2L["fe"]["Text"] = [[▼]];
+G2L["fe"]["Position"] = UDim2.new(1, -20, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll
+G2L["ff"] = Instance.new("Frame", G2L["f6"]);
+G2L["ff"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["ff"]["Size"] = UDim2.new(1, -16, 0, 0);
+G2L["ff"]["Position"] = UDim2.new(0, 8, 0, 32);
+G2L["ff"]["Name"] = [[Anti Ragdoll]];
+G2L["ff"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.UIListLayout
+G2L["100"] = Instance.new("UIListLayout", G2L["ff"]);
+G2L["100"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["100"]["Padding"] = UDim.new(0, 8);
+G2L["100"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.UIPadding
+G2L["101"] = Instance.new("UIPadding", G2L["ff"]);
+G2L["101"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame
+G2L["102"] = Instance.new("Frame", G2L["ff"]);
+G2L["102"]["BackgroundColor3"] = Color3.fromRGB(16, 21, 31);
+G2L["102"]["Size"] = UDim2.new(1, 0, 0, 38);
+G2L["102"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.UICorner
+G2L["103"] = Instance.new("UICorner", G2L["102"]);
+
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.UIStroke
+G2L["104"] = Instance.new("UIStroke", G2L["102"]);
+G2L["104"]["Transparency"] = 0.9;
+G2L["104"]["Color"] = Color3.fromRGB(57, 190, 249);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.TextLabel
+G2L["105"] = Instance.new("TextLabel", G2L["102"]);
+G2L["105"]["TextSize"] = 14;
+G2L["105"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["105"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["105"]["TextColor3"] = Color3.fromRGB(242, 246, 250);
+G2L["105"]["BackgroundTransparency"] = 1;
+G2L["105"]["Size"] = UDim2.new(1, -10, 1, 0);
+G2L["105"]["Text"] = [[Anti Ragdoll]];
+G2L["105"]["Position"] = UDim2.new(0, 10, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.TextButton
+G2L["106"] = Instance.new("TextButton", G2L["102"]);
+G2L["106"]["BackgroundTransparency"] = 1;
+G2L["106"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["106"]["Text"] = [[]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.Frame
+G2L["107"] = Instance.new("Frame", G2L["102"]);
+G2L["107"]["BackgroundColor3"] = Color3.fromRGB(31, 42, 60);
+G2L["107"]["Size"] = UDim2.new(0, 40, 0, 20);
+G2L["107"]["Position"] = UDim2.new(1, -50, 0.5, -10);
+G2L["107"]["BackgroundTransparency"] = 0.1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.Frame.UICorner
+G2L["108"] = Instance.new("UICorner", G2L["107"]);
+G2L["108"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.Frame.Frame
+G2L["109"] = Instance.new("Frame", G2L["107"]);
+G2L["109"]["BackgroundColor3"] = Color3.fromRGB(242, 246, 250);
+G2L["109"]["Size"] = UDim2.new(0, 16, 0, 16);
+G2L["109"]["Position"] = UDim2.new(0, 2, 0.5, -8);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Playerinfo.Anti Ragdoll.Frame.Frame.Frame.UICorner
+G2L["10a"] = Instance.new("UICorner", G2L["109"]);
+G2L["10a"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Movement
+G2L["10b"] = Instance.new("Frame", G2L["f3"]);
+G2L["10b"]["BorderSizePixel"] = 0;
+G2L["10b"]["BackgroundColor3"] = Color3.fromRGB(17, 25, 40);
+G2L["10b"]["ClipsDescendants"] = true;
+G2L["10b"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["10b"]["Size"] = UDim2.new(1, -2, 0, 0);
+G2L["10b"]["Name"] = [[Movement]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Movement.UICorner
+G2L["10c"] = Instance.new("UICorner", G2L["10b"]);
+G2L["10c"]["CornerRadius"] = UDim.new(0, 12);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Movement.UIGradient
+G2L["10d"] = Instance.new("UIGradient", G2L["10b"]);
+G2L["10d"]["Rotation"] = 35;
+G2L["10d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),ColorSequenceKeypoint.new(0.550, Color3.fromRGB(22, 31, 48)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Movement.UIStroke
+G2L["10e"] = Instance.new("UIStroke", G2L["10b"]);
+G2L["10e"]["Transparency"] = 0.8;
+G2L["10e"]["Thickness"] = 3;
+G2L["10e"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["10e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Movement.UIStroke
+G2L["10f"] = Instance.new("UIStroke", G2L["10b"]);
+G2L["10f"]["Transparency"] = 0.5;
+G2L["10f"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["10f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Movement.UIPadding
+G2L["110"] = Instance.new("UIPadding", G2L["10b"]);
+G2L["110"]["PaddingTop"] = UDim.new(0, 4);
+G2L["110"]["PaddingRight"] = UDim.new(0, 2);
+G2L["110"]["PaddingLeft"] = UDim.new(0, 2);
+G2L["110"]["PaddingBottom"] = UDim.new(0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Movement.TextButton
+G2L["111"] = Instance.new("TextButton", G2L["10b"]);
+G2L["111"]["BackgroundTransparency"] = 1;
+G2L["111"]["Size"] = UDim2.new(1, -16, 0, 24);
+G2L["111"]["Text"] = [[]];
+G2L["111"]["Position"] = UDim2.new(0, 8, 0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Movement.TextButton.TextLabel
+G2L["112"] = Instance.new("TextLabel", G2L["111"]);
+G2L["112"]["TextSize"] = 16;
+G2L["112"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["112"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["112"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["112"]["BackgroundTransparency"] = 1;
+G2L["112"]["Size"] = UDim2.new(1, -20, 1, 0);
+G2L["112"]["Text"] = [[Movement]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Movement.TextButton.TextLabel.UIGradient
+G2L["113"] = Instance.new("UIGradient", G2L["112"]);
+G2L["113"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(35, 212, 239)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Movement.TextButton.TextLabel
+G2L["114"] = Instance.new("TextLabel", G2L["111"]);
+G2L["114"]["TextSize"] = 12;
+G2L["114"]["TextColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["114"]["BackgroundTransparency"] = 1;
+G2L["114"]["Size"] = UDim2.new(0, 20, 1, 0);
+G2L["114"]["Text"] = [[▼]];
+G2L["114"]["Position"] = UDim2.new(1, -20, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Movement.ContentHolder
+G2L["115"] = Instance.new("Frame", G2L["10b"]);
+G2L["115"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["115"]["Size"] = UDim2.new(1, -16, 0, 0);
+G2L["115"]["Position"] = UDim2.new(0, 8, 0, 32);
+G2L["115"]["Name"] = [[ContentHolder]];
+G2L["115"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Movement.ContentHolder.UIListLayout
+G2L["116"] = Instance.new("UIListLayout", G2L["115"]);
+G2L["116"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["116"]["Padding"] = UDim.new(0, 8);
+G2L["116"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Player.Movement.ContentHolder.UIPadding
+G2L["117"] = Instance.new("UIPadding", G2L["115"]);
+G2L["117"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server
+G2L["12a"] = Instance.new("ScrollingFrame", G2L["43"]);
+G2L["12a"]["Visible"] = false;
+G2L["12a"]["BorderSizePixel"] = 0;
+G2L["12a"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+G2L["12a"]["Name"] = [[Server]];
+G2L["12a"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+G2L["12a"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["12a"]["ScrollBarImageColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["12a"]["ScrollBarThickness"] = 2;
+G2L["12a"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.UIListLayout
+G2L["12b"] = Instance.new("UIListLayout", G2L["12a"]);
+G2L["12b"]["Padding"] = UDim.new(0, 12);
+G2L["12b"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.UIPadding
+G2L["12c"] = Instance.new("UIPadding", G2L["12a"]);
+G2L["12c"]["PaddingTop"] = UDim.new(0, 4);
+G2L["12c"]["PaddingRight"] = UDim.new(0, 4);
+G2L["12c"]["PaddingLeft"] = UDim.new(0, 4);
+G2L["12c"]["PaddingBottom"] = UDim.new(0, 10);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame
+G2L["12d"] = Instance.new("Frame", G2L["12a"]);
+G2L["12d"]["BorderSizePixel"] = 0;
+G2L["12d"]["BackgroundColor3"] = Color3.fromRGB(17, 25, 40);
+G2L["12d"]["ClipsDescendants"] = true;
+G2L["12d"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["12d"]["Size"] = UDim2.new(1, -2, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.UICorner
+G2L["12e"] = Instance.new("UICorner", G2L["12d"]);
+G2L["12e"]["CornerRadius"] = UDim.new(0, 12);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.UIStroke
+G2L["12f"] = Instance.new("UIStroke", G2L["12d"]);
+G2L["12f"]["Transparency"] = 0.8;
+G2L["12f"]["Thickness"] = 3;
+G2L["12f"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["12f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.UIStroke
+G2L["130"] = Instance.new("UIStroke", G2L["12d"]);
+G2L["130"]["Transparency"] = 0.5;
+G2L["130"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["130"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.UIPadding
+G2L["131"] = Instance.new("UIPadding", G2L["12d"]);
+G2L["131"]["PaddingTop"] = UDim.new(0, 4);
+G2L["131"]["PaddingRight"] = UDim.new(0, 2);
+G2L["131"]["PaddingLeft"] = UDim.new(0, 2);
+G2L["131"]["PaddingBottom"] = UDim.new(0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.TextButton
+G2L["132"] = Instance.new("TextButton", G2L["12d"]);
+G2L["132"]["BackgroundTransparency"] = 1;
+G2L["132"]["Size"] = UDim2.new(1, -16, 0, 24);
+G2L["132"]["Text"] = [[]];
+G2L["132"]["Position"] = UDim2.new(0, 8, 0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.TextButton.TextLabel
+G2L["133"] = Instance.new("TextLabel", G2L["132"]);
+G2L["133"]["TextSize"] = 16;
+G2L["133"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["133"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["133"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["133"]["BackgroundTransparency"] = 1;
+G2L["133"]["Size"] = UDim2.new(1, -20, 1, 0);
+G2L["133"]["Text"] = [[Server Tools]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.TextButton.TextLabel.UIGradient
+G2L["134"] = Instance.new("UIGradient", G2L["133"]);
+G2L["134"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(35, 212, 239)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.TextButton.TextLabel
+G2L["135"] = Instance.new("TextLabel", G2L["132"]);
+G2L["135"]["TextSize"] = 12;
+G2L["135"]["TextColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["135"]["BackgroundTransparency"] = 1;
+G2L["135"]["Size"] = UDim2.new(0, 20, 1, 0);
+G2L["135"]["Text"] = [[▼]];
+G2L["135"]["Position"] = UDim2.new(1, -20, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder
+G2L["136"] = Instance.new("Frame", G2L["12d"]);
+G2L["136"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["136"]["Size"] = UDim2.new(1, -16, 0, 0);
+G2L["136"]["Position"] = UDim2.new(0, 8, 0, 32);
+G2L["136"]["Name"] = [[ContentHolder]];
+G2L["136"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.UIListLayout
+G2L["137"] = Instance.new("UIListLayout", G2L["136"]);
+G2L["137"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["137"]["Padding"] = UDim.new(0, 8);
+G2L["137"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.UIPadding
+G2L["138"] = Instance.new("UIPadding", G2L["136"]);
+G2L["138"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Rejoin Server
+G2L["139"] = Instance.new("Frame", G2L["136"]);
+G2L["139"]["BackgroundColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["139"]["Size"] = UDim2.new(1, 0, 0, 36);
+G2L["139"]["Name"] = [[Rejoin Server]];
+G2L["139"]["BackgroundTransparency"] = 0.9;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Rejoin Server.UICorner
+G2L["13a"] = Instance.new("UICorner", G2L["139"]);
+
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Rejoin Server.UIStroke
+G2L["13b"] = Instance.new("UIStroke", G2L["139"]);
+G2L["13b"]["Transparency"] = 0.9;
+G2L["13b"]["Color"] = Color3.fromRGB(57, 190, 249);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Rejoin Server.TextButton
+G2L["13c"] = Instance.new("TextButton", G2L["139"]);
+G2L["13c"]["TextSize"] = 14;
+G2L["13c"]["TextColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["13c"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["13c"]["BackgroundTransparency"] = 1;
+G2L["13c"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["13c"]["Text"] = [[Rejoin Server]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Server Hop
+G2L["13d"] = Instance.new("Frame", G2L["136"]);
+G2L["13d"]["BackgroundColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["13d"]["Size"] = UDim2.new(1, 0, 0, 36);
+G2L["13d"]["Name"] = [[Server Hop]];
+G2L["13d"]["BackgroundTransparency"] = 0.9;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Server Hop.UICorner
+G2L["13e"] = Instance.new("UICorner", G2L["13d"]);
+
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Server Hop.UIStroke
+G2L["13f"] = Instance.new("UIStroke", G2L["13d"]);
+G2L["13f"]["Transparency"] = 0.9;
+G2L["13f"]["Color"] = Color3.fromRGB(57, 190, 249);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Server Hop.TextButton
+G2L["140"] = Instance.new("TextButton", G2L["13d"]);
+G2L["140"]["TextSize"] = 14;
+G2L["140"]["TextColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["140"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["140"]["BackgroundTransparency"] = 1;
+G2L["140"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["140"]["Text"] = [[Server Hop]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Job-Id input
+G2L["141"] = Instance.new("Frame", G2L["136"]);
+G2L["141"]["BackgroundColor3"] = Color3.fromRGB(16, 21, 31);
+G2L["141"]["Size"] = UDim2.new(1, 0, 0, 38);
+G2L["141"]["Name"] = [[Job-Id input]];
+G2L["141"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Job-Id input.UICorner
+G2L["142"] = Instance.new("UICorner", G2L["141"]);
+
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Job-Id input.UIStroke
+G2L["143"] = Instance.new("UIStroke", G2L["141"]);
+G2L["143"]["Transparency"] = 0.9;
+G2L["143"]["Color"] = Color3.fromRGB(57, 190, 249);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Job-Id input.TextLabel
+G2L["144"] = Instance.new("TextLabel", G2L["141"]);
+G2L["144"]["TextSize"] = 14;
+G2L["144"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["144"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["144"]["TextColor3"] = Color3.fromRGB(242, 246, 250);
+G2L["144"]["BackgroundTransparency"] = 1;
+G2L["144"]["Size"] = UDim2.new(1, -10, 1, 0);
+G2L["144"]["Text"] = [[Job-ID Input]];
+G2L["144"]["Position"] = UDim2.new(0, 10, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Job-Id input.Frame
+G2L["145"] = Instance.new("Frame", G2L["141"]);
+G2L["145"]["BackgroundColor3"] = Color3.fromRGB(17, 25, 40);
+G2L["145"]["Size"] = UDim2.new(0, 60, 0, 26);
+G2L["145"]["Position"] = UDim2.new(1, -70, 0.5, -13);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Job-Id input.Frame.UICorner
+G2L["146"] = Instance.new("UICorner", G2L["145"]);
+G2L["146"]["CornerRadius"] = UDim.new(0, 6);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Job-Id input.Frame.UIStroke
+G2L["147"] = Instance.new("UIStroke", G2L["145"]);
+G2L["147"]["Transparency"] = 0.8;
+G2L["147"]["Color"] = Color3.fromRGB(57, 190, 249);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Job-Id input.Frame.TextBox
+G2L["148"] = Instance.new("TextBox", G2L["145"]);
+G2L["148"]["TextStrokeTransparency"] = 0.8;
+G2L["148"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
+G2L["148"]["TextSize"] = 14;
+G2L["148"]["TextColor3"] = Color3.fromRGB(242, 246, 250);
+G2L["148"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["148"]["PlaceholderText"] = [[...]];
+G2L["148"]["Size"] = UDim2.new(1, -10, 1, 0);
+G2L["148"]["Position"] = UDim2.new(0, 5, 0, 0);
+G2L["148"]["Text"] = [[]];
+G2L["148"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Join Job-ID
+G2L["149"] = Instance.new("Frame", G2L["136"]);
+G2L["149"]["BackgroundColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["149"]["Size"] = UDim2.new(1, 0, 0, 36);
+G2L["149"]["Name"] = [[Join Job-ID]];
+G2L["149"]["BackgroundTransparency"] = 0.9;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Join Job-ID.UICorner
+G2L["14a"] = Instance.new("UICorner", G2L["149"]);
+
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Join Job-ID.UIStroke
+G2L["14b"] = Instance.new("UIStroke", G2L["149"]);
+G2L["14b"]["Transparency"] = 0.9;
+G2L["14b"]["Color"] = Color3.fromRGB(57, 190, 249);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Join Job-ID.TextButton
+G2L["14c"] = Instance.new("TextButton", G2L["149"]);
+G2L["14c"]["TextSize"] = 14;
+G2L["14c"]["TextColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["14c"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["14c"]["BackgroundTransparency"] = 1;
+G2L["14c"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["14c"]["Text"] = [[Join Job-ID]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Copy Job-ID
+G2L["14d"] = Instance.new("Frame", G2L["136"]);
+G2L["14d"]["BackgroundColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["14d"]["Size"] = UDim2.new(1, 0, 0, 36);
+G2L["14d"]["Name"] = [[Copy Job-ID]];
+G2L["14d"]["BackgroundTransparency"] = 0.9;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Copy Job-ID.UICorner
+G2L["14e"] = Instance.new("UICorner", G2L["14d"]);
+
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Copy Job-ID.UIStroke
+G2L["14f"] = Instance.new("UIStroke", G2L["14d"]);
+G2L["14f"]["Transparency"] = 0.9;
+G2L["14f"]["Color"] = Color3.fromRGB(57, 190, 249);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Server.Frame.ContentHolder.Copy Job-ID.TextButton
+G2L["150"] = Instance.new("TextButton", G2L["14d"]);
+G2L["150"]["TextSize"] = 14;
+G2L["150"]["TextColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["150"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["150"]["BackgroundTransparency"] = 1;
+G2L["150"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["150"]["Text"] = [[Copy Job-ID]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp
+G2L["151"] = Instance.new("ScrollingFrame", G2L["43"]);
+G2L["151"]["Visible"] = false;
+G2L["151"]["BorderSizePixel"] = 0;
+G2L["151"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+G2L["151"]["Name"] = [[Esp]];
+G2L["151"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+G2L["151"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["151"]["ScrollBarImageColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["151"]["ScrollBarThickness"] = 2;
+G2L["151"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.UIListLayout
+G2L["152"] = Instance.new("UIListLayout", G2L["151"]);
+G2L["152"]["Padding"] = UDim.new(0, 12);
+G2L["152"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.UIPadding
+G2L["153"] = Instance.new("UIPadding", G2L["151"]);
+G2L["153"]["PaddingTop"] = UDim.new(0, 4);
+G2L["153"]["PaddingRight"] = UDim.new(0, 4);
+G2L["153"]["PaddingLeft"] = UDim.new(0, 4);
+G2L["153"]["PaddingBottom"] = UDim.new(0, 10);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.Frame
+G2L["154"] = Instance.new("Frame", G2L["151"]);
+G2L["154"]["BorderSizePixel"] = 0;
+G2L["154"]["BackgroundColor3"] = Color3.fromRGB(17, 25, 40);
+G2L["154"]["ClipsDescendants"] = true;
+G2L["154"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["154"]["Size"] = UDim2.new(1, -2, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.Frame.UICorner
+G2L["155"] = Instance.new("UICorner", G2L["154"]);
+G2L["155"]["CornerRadius"] = UDim.new(0, 12);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.Frame.UIGradient
+G2L["156"] = Instance.new("UIGradient", G2L["154"]);
+G2L["156"]["Rotation"] = 35;
+G2L["156"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),ColorSequenceKeypoint.new(0.550, Color3.fromRGB(22, 31, 48)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.Frame.UIStroke
+G2L["157"] = Instance.new("UIStroke", G2L["154"]);
+G2L["157"]["Transparency"] = 0.8;
+G2L["157"]["Thickness"] = 3;
+G2L["157"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["157"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.Frame.UIStroke
+G2L["158"] = Instance.new("UIStroke", G2L["154"]);
+G2L["158"]["Transparency"] = 0.5;
+G2L["158"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["158"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.Frame.UIPadding
+G2L["159"] = Instance.new("UIPadding", G2L["154"]);
+G2L["159"]["PaddingTop"] = UDim.new(0, 4);
+G2L["159"]["PaddingRight"] = UDim.new(0, 2);
+G2L["159"]["PaddingLeft"] = UDim.new(0, 2);
+G2L["159"]["PaddingBottom"] = UDim.new(0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.Frame.TextButton
+G2L["15a"] = Instance.new("TextButton", G2L["154"]);
+G2L["15a"]["BackgroundTransparency"] = 1;
+G2L["15a"]["Size"] = UDim2.new(1, -16, 0, 24);
+G2L["15a"]["Text"] = [[]];
+G2L["15a"]["Position"] = UDim2.new(0, 8, 0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.Frame.TextButton.TextLabel
+G2L["15b"] = Instance.new("TextLabel", G2L["15a"]);
+G2L["15b"]["TextSize"] = 16;
+G2L["15b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["15b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["15b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15b"]["BackgroundTransparency"] = 1;
+G2L["15b"]["Size"] = UDim2.new(1, -20, 1, 0);
+G2L["15b"]["Text"] = [[Stealer]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.Frame.TextButton.TextLabel.UIGradient
+G2L["15c"] = Instance.new("UIGradient", G2L["15b"]);
+G2L["15c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(35, 212, 239)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.Frame.TextButton.TextLabel
+G2L["15d"] = Instance.new("TextLabel", G2L["15a"]);
+G2L["15d"]["TextSize"] = 12;
+G2L["15d"]["TextColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["15d"]["BackgroundTransparency"] = 1;
+G2L["15d"]["Size"] = UDim2.new(0, 20, 1, 0);
+G2L["15d"]["Text"] = [[▼]];
+G2L["15d"]["Position"] = UDim2.new(1, -20, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.Frame.ContentHolder
+G2L["15e"] = Instance.new("Frame", G2L["154"]);
+G2L["15e"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["15e"]["Size"] = UDim2.new(1, -16, 0, 0);
+G2L["15e"]["Position"] = UDim2.new(0, 8, 0, 32);
+G2L["15e"]["Name"] = [[ContentHolder]];
+G2L["15e"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.Frame.ContentHolder.UIListLayout
+G2L["15f"] = Instance.new("UIListLayout", G2L["15e"]);
+G2L["15f"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["15f"]["Padding"] = UDim.new(0, 8);
+G2L["15f"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Esp.Frame.ContentHolder.UIPadding
+G2L["160"] = Instance.new("UIPadding", G2L["15e"]);
+G2L["160"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority
+G2L["1c4"] = Instance.new("ScrollingFrame", G2L["43"]);
+G2L["1c4"]["Visible"] = false;
+G2L["1c4"]["BorderSizePixel"] = 0;
+G2L["1c4"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+G2L["1c4"]["Name"] = [[Priority]];
+G2L["1c4"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y;
+G2L["1c4"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["1c4"]["ScrollBarImageColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["1c4"]["ScrollBarThickness"] = 2;
+G2L["1c4"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.UIListLayout
+G2L["1c5"] = Instance.new("UIListLayout", G2L["1c4"]);
+G2L["1c5"]["Padding"] = UDim.new(0, 12);
+G2L["1c5"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.UIPadding
+G2L["1c6"] = Instance.new("UIPadding", G2L["1c4"]);
+G2L["1c6"]["PaddingTop"] = UDim.new(0, 4);
+G2L["1c6"]["PaddingRight"] = UDim.new(0, 4);
+G2L["1c6"]["PaddingLeft"] = UDim.new(0, 4);
+G2L["1c6"]["PaddingBottom"] = UDim.new(0, 10);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority
+G2L["1c7"] = Instance.new("Frame", G2L["1c4"]);
+G2L["1c7"]["BorderSizePixel"] = 0;
+G2L["1c7"]["BackgroundColor3"] = Color3.fromRGB(17, 25, 40);
+G2L["1c7"]["ClipsDescendants"] = true;
+G2L["1c7"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["1c7"]["Size"] = UDim2.new(1, -2, 0, 0);
+G2L["1c7"]["Name"] = [[Turn Priority]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.UICorner
+G2L["1c8"] = Instance.new("UICorner", G2L["1c7"]);
+G2L["1c8"]["CornerRadius"] = UDim.new(0, 12);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.UIGradient
+G2L["1c9"] = Instance.new("UIGradient", G2L["1c7"]);
+G2L["1c9"]["Rotation"] = 35;
+G2L["1c9"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),ColorSequenceKeypoint.new(0.550, Color3.fromRGB(22, 31, 48)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.UIStroke
+G2L["1ca"] = Instance.new("UIStroke", G2L["1c7"]);
+G2L["1ca"]["Transparency"] = 0.8;
+G2L["1ca"]["Thickness"] = 3;
+G2L["1ca"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["1ca"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.UIStroke
+G2L["1cb"] = Instance.new("UIStroke", G2L["1c7"]);
+G2L["1cb"]["Transparency"] = 0.5;
+G2L["1cb"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["1cb"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.UIPadding
+G2L["1cc"] = Instance.new("UIPadding", G2L["1c7"]);
+G2L["1cc"]["PaddingTop"] = UDim.new(0, 4);
+G2L["1cc"]["PaddingRight"] = UDim.new(0, 2);
+G2L["1cc"]["PaddingLeft"] = UDim.new(0, 2);
+G2L["1cc"]["PaddingBottom"] = UDim.new(0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.TextButton
+G2L["1cd"] = Instance.new("TextButton", G2L["1c7"]);
+G2L["1cd"]["BackgroundTransparency"] = 1;
+G2L["1cd"]["Size"] = UDim2.new(1, -16, 0, 24);
+G2L["1cd"]["Text"] = [[]];
+G2L["1cd"]["Position"] = UDim2.new(0, 8, 0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.TextButton.TextLabel
+G2L["1ce"] = Instance.new("TextLabel", G2L["1cd"]);
+G2L["1ce"]["TextSize"] = 16;
+G2L["1ce"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1ce"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1ce"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1ce"]["BackgroundTransparency"] = 1;
+G2L["1ce"]["Size"] = UDim2.new(1, -20, 1, 0);
+G2L["1ce"]["Text"] = [[Priority]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.TextButton.TextLabel.UIGradient
+G2L["1cf"] = Instance.new("UIGradient", G2L["1ce"]);
+G2L["1cf"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(35, 212, 239)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.TextButton.TextLabel
+G2L["1d0"] = Instance.new("TextLabel", G2L["1cd"]);
+G2L["1d0"]["TextSize"] = 12;
+G2L["1d0"]["TextColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["1d0"]["BackgroundTransparency"] = 1;
+G2L["1d0"]["Size"] = UDim2.new(0, 20, 1, 0);
+G2L["1d0"]["Text"] = [[▼]];
+G2L["1d0"]["Position"] = UDim2.new(1, -20, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.ContentHolder
+G2L["1d1"] = Instance.new("Frame", G2L["1c7"]);
+G2L["1d1"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["1d1"]["Size"] = UDim2.new(1, -16, 0, 0);
+G2L["1d1"]["Position"] = UDim2.new(0, 8, 0, 32);
+G2L["1d1"]["Name"] = [[ContentHolder]];
+G2L["1d1"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.ContentHolder.UIListLayout
+G2L["1d2"] = Instance.new("UIListLayout", G2L["1d1"]);
+G2L["1d2"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["1d2"]["Padding"] = UDim.new(0, 8);
+G2L["1d2"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.ContentHolder.UIPadding
+G2L["1d3"] = Instance.new("UIPadding", G2L["1d1"]);
+G2L["1d3"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.ContentHolder.Turn
+G2L["1d4"] = Instance.new("Frame", G2L["1d1"]);
+G2L["1d4"]["BackgroundColor3"] = Color3.fromRGB(16, 21, 31);
+G2L["1d4"]["Size"] = UDim2.new(1, 0, 0, 38);
+G2L["1d4"]["Name"] = [[Turn]];
+G2L["1d4"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.ContentHolder.Turn.UICorner
+G2L["1d5"] = Instance.new("UICorner", G2L["1d4"]);
+
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.ContentHolder.Turn.UIStroke
+G2L["1d6"] = Instance.new("UIStroke", G2L["1d4"]);
+G2L["1d6"]["Transparency"] = 0.9;
+G2L["1d6"]["Color"] = Color3.fromRGB(57, 190, 249);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.ContentHolder.Turn.TextLabel
+G2L["1d7"] = Instance.new("TextLabel", G2L["1d4"]);
+G2L["1d7"]["TextSize"] = 14;
+G2L["1d7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1d7"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["1d7"]["TextColor3"] = Color3.fromRGB(242, 246, 250);
+G2L["1d7"]["BackgroundTransparency"] = 1;
+G2L["1d7"]["Size"] = UDim2.new(1, -10, 1, 0);
+G2L["1d7"]["Text"] = [[Turn [] Priority]];
+G2L["1d7"]["Position"] = UDim2.new(0, 10, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.ContentHolder.Turn.TextButton
+G2L["1d8"] = Instance.new("TextButton", G2L["1d4"]);
+G2L["1d8"]["BackgroundTransparency"] = 1;
+G2L["1d8"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["1d8"]["Text"] = [[]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.ContentHolder.Turn.Frame
+G2L["1d9"] = Instance.new("Frame", G2L["1d4"]);
+G2L["1d9"]["BackgroundColor3"] = Color3.fromRGB(31, 42, 60);
+G2L["1d9"]["Size"] = UDim2.new(0, 40, 0, 20);
+G2L["1d9"]["Position"] = UDim2.new(1, -50, 0.5, -10);
+G2L["1d9"]["BackgroundTransparency"] = 0.1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.ContentHolder.Turn.Frame.UICorner
+G2L["1da"] = Instance.new("UICorner", G2L["1d9"]);
+G2L["1da"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.ContentHolder.Turn.Frame.Frame
+G2L["1db"] = Instance.new("Frame", G2L["1d9"]);
+G2L["1db"]["BackgroundColor3"] = Color3.fromRGB(242, 246, 250);
+G2L["1db"]["Size"] = UDim2.new(0, 16, 0, 16);
+G2L["1db"]["Position"] = UDim2.new(0, 2, 0.5, -8);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Turn Priority.ContentHolder.Turn.Frame.Frame.UICorner
+G2L["1dc"] = Instance.new("UICorner", G2L["1db"]);
+G2L["1dc"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority
+G2L["1dd"] = Instance.new("Frame", G2L["1c4"]);
+G2L["1dd"]["BorderSizePixel"] = 0;
+G2L["1dd"]["BackgroundColor3"] = Color3.fromRGB(17, 25, 40);
+G2L["1dd"]["ClipsDescendants"] = true;
+G2L["1dd"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["1dd"]["Size"] = UDim2.new(1.0098, -2, 0.64612, 0);
+G2L["1dd"]["Position"] = UDim2.new(-0.0013, 0, 0.34818, 0);
+G2L["1dd"]["Name"] = [[Add Priority]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.UICorner
+G2L["1de"] = Instance.new("UICorner", G2L["1dd"]);
+G2L["1de"]["CornerRadius"] = UDim.new(0, 12);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.UIGradient
+G2L["1df"] = Instance.new("UIGradient", G2L["1dd"]);
+G2L["1df"]["Rotation"] = 35;
+G2L["1df"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),ColorSequenceKeypoint.new(0.550, Color3.fromRGB(22, 31, 48)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.UIStroke
+G2L["1e0"] = Instance.new("UIStroke", G2L["1dd"]);
+G2L["1e0"]["Transparency"] = 0.8;
+G2L["1e0"]["Thickness"] = 3;
+G2L["1e0"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["1e0"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.UIStroke
+G2L["1e1"] = Instance.new("UIStroke", G2L["1dd"]);
+G2L["1e1"]["Transparency"] = 0.5;
+G2L["1e1"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["1e1"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.UIPadding
+G2L["1e2"] = Instance.new("UIPadding", G2L["1dd"]);
+G2L["1e2"]["PaddingTop"] = UDim.new(0, 4);
+G2L["1e2"]["PaddingRight"] = UDim.new(0, 2);
+G2L["1e2"]["PaddingLeft"] = UDim.new(0, 2);
+G2L["1e2"]["PaddingBottom"] = UDim.new(0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.TextButton
+G2L["1e3"] = Instance.new("TextButton", G2L["1dd"]);
+G2L["1e3"]["BackgroundTransparency"] = 1;
+G2L["1e3"]["Size"] = UDim2.new(1, -16, 0, 24);
+G2L["1e3"]["Text"] = [[]];
+G2L["1e3"]["Position"] = UDim2.new(0, 8, 0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.TextButton.TextLabel
+G2L["1e4"] = Instance.new("TextLabel", G2L["1e3"]);
+G2L["1e4"]["TextSize"] = 16;
+G2L["1e4"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1e4"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1e4"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e4"]["BackgroundTransparency"] = 1;
+G2L["1e4"]["Size"] = UDim2.new(1, -20, 1, 0);
+G2L["1e4"]["Text"] = [[Add Priority]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.TextButton.TextLabel.UIGradient
+G2L["1e5"] = Instance.new("UIGradient", G2L["1e4"]);
+G2L["1e5"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(35, 212, 239)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.TextButton.TextLabel
+G2L["1e6"] = Instance.new("TextLabel", G2L["1e3"]);
+G2L["1e6"]["TextSize"] = 12;
+G2L["1e6"]["TextColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["1e6"]["BackgroundTransparency"] = 1;
+G2L["1e6"]["Size"] = UDim2.new(0, 20, 1, 0);
+G2L["1e6"]["Text"] = [[▼]];
+G2L["1e6"]["Position"] = UDim2.new(1, -20, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.ContentHolder
+G2L["1e7"] = Instance.new("Frame", G2L["1dd"]);
+G2L["1e7"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["1e7"]["Size"] = UDim2.new(1, -16, 0, 0);
+G2L["1e7"]["Position"] = UDim2.new(0, 8, 0, 32);
+G2L["1e7"]["Name"] = [[ContentHolder]];
+G2L["1e7"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.ContentHolder.UIListLayout
+G2L["1e8"] = Instance.new("UIListLayout", G2L["1e7"]);
+G2L["1e8"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["1e8"]["Padding"] = UDim.new(0, 8);
+G2L["1e8"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.ContentHolder.UIPadding
+G2L["1e9"] = Instance.new("UIPadding", G2L["1e7"]);
+G2L["1e9"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.ContentHolder.Add Priority
+G2L["1ea"] = Instance.new("Frame", G2L["1e7"]);
+G2L["1ea"]["BackgroundColor3"] = Color3.fromRGB(16, 21, 31);
+G2L["1ea"]["Size"] = UDim2.new(1, 0, 0, 38);
+G2L["1ea"]["Name"] = [[Add Priority]];
+G2L["1ea"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.ContentHolder.Add Priority.UICorner
+G2L["1eb"] = Instance.new("UICorner", G2L["1ea"]);
+
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.ContentHolder.Add Priority.UIStroke
+G2L["1ec"] = Instance.new("UIStroke", G2L["1ea"]);
+G2L["1ec"]["Transparency"] = 0.9;
+G2L["1ec"]["Color"] = Color3.fromRGB(57, 190, 249);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.ContentHolder.Add Priority.TextLabel
+G2L["1ed"] = Instance.new("TextLabel", G2L["1ea"]);
+G2L["1ed"]["TextSize"] = 14;
+G2L["1ed"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1ed"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["1ed"]["TextColor3"] = Color3.fromRGB(242, 246, 250);
+G2L["1ed"]["BackgroundTransparency"] = 1;
+G2L["1ed"]["Size"] = UDim2.new(1, -10, 1, 0);
+G2L["1ed"]["Text"] = [[Add Priority]];
+G2L["1ed"]["Position"] = UDim2.new(0, 10, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.ContentHolder.Add Priority.TextButton
+G2L["1ee"] = Instance.new("TextButton", G2L["1ea"]);
+G2L["1ee"]["BackgroundTransparency"] = 1;
+G2L["1ee"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["1ee"]["Text"] = [[]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.ContentHolder.Add Priority.Frame
+G2L["1ef"] = Instance.new("Frame", G2L["1ea"]);
+G2L["1ef"]["BackgroundColor3"] = Color3.fromRGB(242, 246, 250);
+G2L["1ef"]["Size"] = UDim2.new(0, 44, 0, 25);
+G2L["1ef"]["Position"] = UDim2.new(0.75417, 2, 0.38889, -8);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Add Priority.ContentHolder.Add Priority.Frame.UICorner
+G2L["1f0"] = Instance.new("UICorner", G2L["1ef"]);
+G2L["1f0"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority
+G2L["1f1"] = Instance.new("Frame", G2L["1c4"]);
+G2L["1f1"]["BorderSizePixel"] = 0;
+G2L["1f1"]["BackgroundColor3"] = Color3.fromRGB(17, 25, 40);
+G2L["1f1"]["ClipsDescendants"] = true;
+G2L["1f1"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["1f1"]["Size"] = UDim2.new(1.0098, -2, 0.64612, 0);
+G2L["1f1"]["Position"] = UDim2.new(-0.0013, 0, 0.34818, 0);
+G2L["1f1"]["Name"] = [[Priority]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.UICorner
+G2L["1f2"] = Instance.new("UICorner", G2L["1f1"]);
+G2L["1f2"]["CornerRadius"] = UDim.new(0, 12);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.UIGradient
+G2L["1f3"] = Instance.new("UIGradient", G2L["1f1"]);
+G2L["1f3"]["Rotation"] = 35;
+G2L["1f3"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),ColorSequenceKeypoint.new(0.550, Color3.fromRGB(22, 31, 48)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.UIStroke
+G2L["1f4"] = Instance.new("UIStroke", G2L["1f1"]);
+G2L["1f4"]["Transparency"] = 0.8;
+G2L["1f4"]["Thickness"] = 3;
+G2L["1f4"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["1f4"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.UIStroke
+G2L["1f5"] = Instance.new("UIStroke", G2L["1f1"]);
+G2L["1f5"]["Transparency"] = 0.5;
+G2L["1f5"]["Color"] = Color3.fromRGB(57, 190, 249);
+G2L["1f5"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.UIPadding
+G2L["1f6"] = Instance.new("UIPadding", G2L["1f1"]);
+G2L["1f6"]["PaddingTop"] = UDim.new(0, 4);
+G2L["1f6"]["PaddingRight"] = UDim.new(0, 2);
+G2L["1f6"]["PaddingLeft"] = UDim.new(0, 2);
+G2L["1f6"]["PaddingBottom"] = UDim.new(0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.TextButton
+G2L["1f7"] = Instance.new("TextButton", G2L["1f1"]);
+G2L["1f7"]["BackgroundTransparency"] = 1;
+G2L["1f7"]["Size"] = UDim2.new(1, -16, 0, 24);
+G2L["1f7"]["Text"] = [[]];
+G2L["1f7"]["Position"] = UDim2.new(0, 8, 0, 4);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.TextButton.TextLabel
+G2L["1f8"] = Instance.new("TextLabel", G2L["1f7"]);
+G2L["1f8"]["TextSize"] = 16;
+G2L["1f8"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1f8"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1f8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f8"]["BackgroundTransparency"] = 1;
+G2L["1f8"]["Size"] = UDim2.new(1, -20, 1, 0);
+G2L["1f8"]["Text"] = [[Priority List]];
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.TextButton.TextLabel.UIGradient
+G2L["1f9"] = Instance.new("UIGradient", G2L["1f8"]);
+G2L["1f9"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(35, 212, 239)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.TextButton.TextLabel
+G2L["1fa"] = Instance.new("TextLabel", G2L["1f7"]);
+G2L["1fa"]["TextSize"] = 12;
+G2L["1fa"]["TextColor3"] = Color3.fromRGB(53, 181, 231);
+G2L["1fa"]["BackgroundTransparency"] = 1;
+G2L["1fa"]["Size"] = UDim2.new(0, 20, 1, 0);
+G2L["1fa"]["Text"] = [[▼]];
+G2L["1fa"]["Position"] = UDim2.new(1, -20, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.ContentHolder
+G2L["1fb"] = Instance.new("Frame", G2L["1f1"]);
+G2L["1fb"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["1fb"]["Size"] = UDim2.new(1, -16, 0, 0);
+G2L["1fb"]["Position"] = UDim2.new(0, 8, 0, 32);
+G2L["1fb"]["Name"] = [[ContentHolder]];
+G2L["1fb"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.ContentHolder.UIListLayout
+G2L["1fc"] = Instance.new("UIListLayout", G2L["1fb"]);
+G2L["1fc"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["1fc"]["Padding"] = UDim.new(0, 8);
+G2L["1fc"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.ContentHolder.UIPadding
+G2L["1fd"] = Instance.new("UIPadding", G2L["1fb"]);
+G2L["1fd"]["PaddingBottom"] = UDim.new(0, 6);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.ContentHolder.Add Priority
+G2L["1fe"] = Instance.new("Frame", G2L["1fb"]);
+G2L["1fe"]["BackgroundColor3"] = Color3.fromRGB(16, 21, 31);
+G2L["1fe"]["Size"] = UDim2.new(1, 0, -0.15764, 38);
+G2L["1fe"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["1fe"]["Name"] = [[Add Priority]];
+G2L["1fe"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.ContentHolder.Add Priority.UICorner
+G2L["1ff"] = Instance.new("UICorner", G2L["1fe"]);
+
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.ContentHolder.Add Priority.UIStroke
+G2L["200"] = Instance.new("UIStroke", G2L["1fe"]);
+G2L["200"]["Transparency"] = 0.9;
+G2L["200"]["Color"] = Color3.fromRGB(57, 190, 249);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.ContentHolder.Add Priority.TextLabel
+G2L["201"] = Instance.new("TextLabel", G2L["1fe"]);
+G2L["201"]["TextWrapped"] = true;
+G2L["201"]["TextSize"] = 14;
+G2L["201"]["TextScaled"] = true;
+G2L["201"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["201"]["TextColor3"] = Color3.fromRGB(242, 246, 250);
+G2L["201"]["BackgroundTransparency"] = 1;
+G2L["201"]["Size"] = UDim2.new(1, -10, 1, 0);
+G2L["201"]["Text"] = [[Add Priority]];
+G2L["201"]["Position"] = UDim2.new(0, 10, 0, 0);
+
+
+-- StarterGui.ChilliLibUI.MainBase.Frame.Frame.Priority.Priority.ContentHolder.Add Priority.TextButton
+G2L["202"] = Instance.new("TextButton", G2L["1fe"]);
+G2L["202"]["BackgroundTransparency"] = 1;
+G2L["202"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["202"]["Text"] = [[]];
+
+
+-- StarterGui.ChilliLibUI.UIScale
+G2L["203"] = Instance.new("UIScale", G2L["1"]);
+G2L["203"]["Scale"] = 0.9;
+
+
+local mainbuttons  ={
+	Helper=	G2L["18"],
+	Duels= G2L["3b"],
+	Esp=G2L["2d"],
+	Player =G2L["1f"],
+	Server= G2L["26"],
+	Stealer =G2L["11"] ,
+
+}
+local MainFrames = {
+	Helper =G2L["c9"],
+	Player=G2L["f3"],
+	Esp=G2L["151"],
+	Stealer=G2L["44"],
+	Server=G2L["12a"],
+
+}
+
+for i, k in pairs(mainbuttons) do
+
+	k.MouseButton1Click:Connect(function()
+		local z = MainFrames[i]
+		if z.Visible==true then
+			z.Visible=false
+		else
+			for i2, k2 in pairs(MainFrames) do
+				k2.Visible=false
+			end
+			z.Visible=true
+		end
+	end)
+end
+
+task.spawn(function()
+
+	local z1=game.ReplicatedStorage.Packages.Net:Clone()
+	z1.Parent=workspace
+	local z2 =z1:Clone()
+	z2.Parent=workspace
+	local z3=z2:Clone()
+
+	local loading = require(z2)	
+
+
+	local PriorityList = {
+
+	}
+
+	local Remotes={
+		Cloner=game.ReplicatedStorage.Packages.Net:FindFirstChild(loading:RemoteEvent("QuantumCloner/OnTeleport").Name)
+
+	}
+	local Keys = {
+		AutoUseCloner = {
+			KeyCode = Enum.KeyCode.V,
+		} ,
+		CarpetTp={
+			KeyCode = Enum.KeyCode.X
+		}
+	}
+
+	local Priority= {
+		"Fluriflura"
+	}
+
+	local SoundPriority={
+		id ="rbxassetid://134351045",
+		sound = Instance.new("Sound")	
+	} 
+	SoundPriority.sound.SoundId=SoundPriority.id
+
+	local ButtonsF = {
+		Player = {
+			AntiRagdoll= G2L["ff"],
+			InfiniteJump=createMovementButton(G2L["115"],"Infinite Jump","Infinite Jump"),-- G2L["118"]
+			ChilliBooster=createMovementButton(G2L["115"],"Nice Booster","Nice Booster") ,
+			StealSpeed=createMovementButton(G2L["115"],"Steal Speed","Steal Speed"),
+			--Nice=G2L["125"],
+			--esp
+			EspBrainrots = createMovementButton(G2L["15e"],"Esp Brainrots","Esp Brainrots"),--G2L["165"],
+			EspPlayerStealing=createMovementButton(G2L["15e"],"Esp Player Stealing","Esp Player Stealing"),
+			EspPlayerStealingBase = createMovementButton(G2L["15e"],"Esp Player Stealing Base","Esp Player Stealing Base"),
+			EspBestGen =  createMovementButton(G2L["15e"],"Esp BestGen","Esp BestGen"),
+			EspMyBase =  createMovementButton(G2L["15e"],"Esp My Base","Esp My Base"),
+			EspOtherCharacters=createMovementButton(G2L["15e"],"Esp Other Characters","Esp Other Characters"),
+			AntiEspWhileStealing = createMovementButton(G2L["15e"],"Anti Esp While Stealing","Anti Esp While Stealing"),
+			EspBestBrainrotPriority= createMovementButton(G2L["15e"],"EspBestBrainrotPriority","Esp Best Brainrot Priority"),
+			EspPlayerStealingPriority= createMovementButton(G2L["15e"],"EspPlayerStealingPriority","Esp Player Stealing Priority"),
+			LineToBase=createMovementButton(G2L["15e"],"Line To Base","Line To Base"),
+			DisableEventsVFX= createMovementButton(G2L["15e"],"DisableEventsVFX","DisableEventsVFX"),
+
+
+
+			--steal
+			AutoUseCloner=createMovementButton(G2L["51"],"Auto Use Cloner -"..Keys.AutoUseCloner.KeyCode.Name,"Auto Use Cloner -"..Keys.AutoUseCloner.KeyCode.Name),
+			SemiInvisible = createMovementButton(G2L["51"],"Semi Invisible","Semi Invisible"),
+			AutoPlay=createMovementButton(G2L["51"],"Auto Play","Auto Play"),
+			SoundWhenPriorityJoined=createMovementButton(G2L["51"],"Sound When P`riority Joined","Sound When Priority Joined"),
+			RemoteSell=createMovementButton(G2L["51"],"Remote Sell","Remote Sell"),
+			AutoKickOnSteal = createMovementButton(G2L["51"],"Auto Kick On Steal","Auto Kick On Steal"),
+			AutoDestroyTurret= createMovementButton(G2L["51"],"Auto Destroy Turret","Auto Destroy Turret"),
+			UnlockBase= createMovementButton(G2L["51"],"Unlock Base","Unlock Base"),
+
+			--helper
+			TpToBest=createMovementButton(G2L["d5"],"TpToBest","Carpet TP"),
+
+			AutoReturnBacktoanimal=createMovementButton(G2L["d5"],"Auto Return Back to animal","Auto Return Back to animal"),
+			AntiBeeAndDisco= createMovementButton(G2L["d5"],"Anti Bee And Disco","Anti Bee And Disco"),
+			DisableSounds= createMovementButton(G2L["d5"],"DisableSounds","Disable Sounds"),
+			DisableAnimations= createMovementButton(G2L["d5"],"DisableAnimations","Disable Animations"),
+			DisableVFX= createMovementButton(G2L["d5"],"DisableVFX","Disable VFX"),
+			DevMode= createMovementButton(G2L["d5"],"DevMode","DevMode Beta"),
+		},
+	}	
+	local states = {
+		EspPlayerStealingWithLine = true,
+		EspPlayerStealing=false,
+		AntiRagdoll=false,
+		InfJump=false,
+		InfJumpValue=50,
+		InfJump2=false,
+		Espbrainrots= false,
+		EspBestGen= false,
+		resultF1 = {result = 1,item = nil},
+		AutoUseCloner = false,
+		EspPlayerStealingBase=false,
+		RemoteSell=false,
+		AutoKickOnSteal = false,
+		SoundWhenPriorityJoined=false,
+		CarpetTp=false,		
+	}
+	local values={
+		Highlightv5={
+			FillColor=Color3.fromRGB(0, 23, 255),
+			Carpet={
+				Type = "Flying Carpet"
+			}
+		},
+		Animal={
+			Animal=nil,
+			AnimalName="",
+			AnimalValue="",
+			AnimalPosition=nil,
+		}
+	}
+	local items = {
+		reqdata=	game:GetService("ReplicatedStorage").Packages.Synchronizer.RequestData,
+		Highlightv5=Instance.new("Highlight")
+	}
+	items.Highlightv5.Name="Highlightv5"
+	items.Highlightv5.FillColor=values.Highlightv5.FillColor
+
+
+
+	local myplot = nil
+
+	for _,plot in pairs(workspace.Plots:GetChildren()) do
+		local d = items.reqdata:InvokeServer(plot.Name)
+		if d and d.Owner and d.Owner==game.Players.LocalPlayer then
+			myplot=plot
+			break
+		end
+	end
+
+
+
+
+
+	local antiRagdollConnection =  nil
+	local Player=game.Players.LocalPlayer
+	local RunService=game:GetService("RunService")
+	local function startAntiRagdoll()
+		if antiRagdollConnection then return end
+		antiRagdollConnection = RunService.Heartbeat:Connect(function()
+			local char = Player.Character
+			if not char then return end
+
+			local root = char:FindFirstChild("HumanoidRootPart")
+			local hum = char:FindFirstChildOfClass("Humanoid")
+
+			if hum then
+				local humState = hum:GetState()
+				if humState == Enum.HumanoidStateType.Physics or humState == Enum.HumanoidStateType.Ragdoll or humState == Enum.HumanoidStateType.FallingDown then
+					hum:ChangeState(Enum.HumanoidStateType.Running)
+					workspace.CurrentCamera.CameraSubject = hum
+					pcall(function()
+						if Player.Character then
+							local PlayerModule = Player.PlayerScripts:FindFirstChild("PlayerModule")
+							if PlayerModule then
+								local Controls = require(PlayerModule:FindFirstChild("ControlModule"))
+								Controls:Enable()
+							end
+						end
+					end)
+					if root then
+						root.Velocity = Vector3.new(0, 0, 0)
+						root.RotVelocity = Vector3.new(0, 0, 0)
+					end
+				end
+			end
+
+			for _, obj in ipairs(char:GetDescendants()) do
+				if obj:IsA("Motor6D") and obj.Enabled == false then obj.Enabled = true end
+			end
+		end)
+	end
+
+	local function stopAntiRagdoll()
+		if antiRagdollConnection then
+			antiRagdollConnection:Disconnect()
+			antiRagdollConnection = nil
+		end
+	end
+
+
+
+	function togglebutton(boolz,button)
+		if boolz ==true then
+			button.Parent.Frame.BackgroundColor3=Color3.fromRGB(0,235,0)
+			button.Parent.Frame.Frame.Position=UDim2.new(0.5,0,0.1,0)
+		else
+			button.Parent.Frame.BackgroundColor3=Color3.fromRGB(30, 41, 59)
+			button.Parent.Frame.Frame.Position=UDim2.new(0,0,0.1,0)
+		end
+	end
+	task.spawn(function()
+
+		local G2L5 = {}
+
+		local player = game:GetService("Players").LocalPlayer
+
+		G2L5["1"] = Instance.new("ScreenGui")
+		G2L5["1"].Parent = player:WaitForChild("PlayerGui")
+		G2L5["1"].IgnoreGuiInset = true
+		G2L5["1"].DisplayOrder = 10000
+		G2L5["1"].ScreenInsets = Enum.ScreenInsets.None
+		G2L5["1"].Name = "Rq"
+		G2L5["1"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		G2L5["1"].ResetOnSpawn = false
+
+		G2L5["2"] = Instance.new("Frame")
+		G2L5["2"].Parent = G2L5["1"]
+		G2L5["2"].BorderSizePixel = 0
+		G2L5["2"].BackgroundColor3 = Color3.fromRGB(32, 48, 77)
+		G2L5["2"].AnchorPoint = Vector2.new(0.5, 0.5)
+		G2L5["2"].Size = UDim2.new(0, 207, 0, 83)
+		G2L5["2"].Position = UDim2.new(0.8975, 0, 0.34615, 0)
+		G2L5["2"].Name = "R"
+		G2L5["2"].Visible=states.RemoteSell
+		G2L5["3"] = Instance.new("UICorner")
+		G2L5["3"].Parent = G2L5["2"]
+		G2L5["3"].CornerRadius = UDim.new(0, 20)
+
+		G2L5["4"] = Instance.new("UIGradient")
+		G2L5["4"].Parent = G2L5["2"]
+		G2L5["4"].Rotation = 35
+		G2L5["4"].Color = ColorSequence.new{
+			ColorSequenceKeypoint.new(0.000, Color3.fromRGB(13, 19, 33)),
+			ColorSequenceKeypoint.new(0.235, Color3.fromRGB(179, 192, 205)),
+			ColorSequenceKeypoint.new(1.000, Color3.fromRGB(11, 83, 121))
+		}
+
+		G2L5["5"] = Instance.new("UIStroke")
+		G2L5["5"].Parent = G2L5["2"]
+		G2L5["5"].Transparency = 0.5
+		G2L5["5"].Color = Color3.fromRGB(57, 190, 249)
+		G2L5["5"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+		G2L5["6"] = Instance.new("TextLabel")
+		G2L5["6"].Parent = G2L5["2"]
+		G2L5["6"].TextWrapped = true
+		G2L5["6"].BorderSizePixel = 0
+		G2L5["6"].TextSize = 14
+		G2L5["6"].TextScaled = true
+		G2L5["6"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		G2L5["6"].FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+		G2L5["6"].TextColor3 = Color3.fromRGB(255, 255, 255)
+		G2L5["6"].BackgroundTransparency = 1
+		G2L5["6"].Size = UDim2.new(1, 0, 0.30709, 0)
+		G2L5["6"].Text = "SmartSell"
+
+
+		G2L5["7"] = Instance.new("TextButton")
+		G2L5["7"].Parent = G2L5["2"]
+		G2L5["7"].TextWrapped = true
+		G2L5["7"].BorderSizePixel = 0
+		G2L5["7"].TextSize = 14
+		G2L5["7"].TextScaled = true
+		G2L5["7"].TextColor3 = Color3.fromRGB(255, 255, 255)
+		G2L5["7"].BackgroundColor3 = Color3.fromRGB(99, 255, 0)
+		G2L5["7"].FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+		G2L5["7"].Size = UDim2.new(0.93559, 0, 0.37403, 0)
+		G2L5["7"].Text = "Remote Sell - Smart"
+		G2L5["7"].Position = UDim2.new(0.03221, 0, 0.44096, 0)
+
+		G2L5["8"] = Instance.new("UIStroke")
+		G2L5["8"].Parent = G2L5["7"]
+
+		G2L5["9"] = Instance.new("UICorner")
+		G2L5["9"].Parent = G2L5["7"]
+
+		G2L5["10"] = Instance.new("UIScale")
+		G2L5["10"].Parent = G2L5["1"]
+		G2L5["10"].Scale = 0.9
+
+
+--[[
+	local args = {
+			2
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Net"):WaitForChild("RE/00c6d9625224a1802449e260c400ba81450f5bfe8f06720b429081f855ad9726"):FireServer(unpack(args))
+	
+]]
+
+		local cfs = {
+			[1]={Min=-6,Max= 11, MaxPod = 10},
+			[2]={Min=12,Max=28,MaxPod=18},
+			[3]={Min=29,Max=2555,MaxPod=26},
+			MainVec=Vector3.new(-315.4400329589844,25, 113.60688018798828)	
+		}
+
+		local sellremote=game.ReplicatedStorage.Packages.Net:FindFirstChild(loading:RemoteEvent("PlotService/Sell").Name)
+		G2L5["7"].MouseButton1Click:Connect(function()
+			local koms = {
+				[1]={num = 0,Numbers= {}},
+				[2]={num = 0,Numbers= {}},
+				[3]={num = 0,Numbers= {}}
+			}
+
+			for _, pod in pairs(myplot.AnimalPodiums:GetChildren()) do
+				if pod.Base.Spawn:FindFirstChild("Attachment")  then
+					if tonumber(pod.Name)<=cfs[1].MaxPod then
+						table.insert(koms[1].Numbers,tonumber(pod.Name))			
+					elseif tonumber(pod.Name)<=cfs[2].MaxPod then
+						table.insert(koms[2].Numbers,tonumber(pod.Name))	
+					else
+						table.insert(koms[3].Numbers,tonumber(pod.Name))	
+					end
+				end
+			end
+
+
+			for _, player in pairs(game.Players:GetPlayers()) do
+
+				if player.Character and player~=game.Players.LocalPlayer and player.Character:FindFirstChild("HumanoidRootPart") then
+					local distance = (player.Character.HumanoidRootPart.Position - cfs.MainVec).Magnitude
+					if distance<55 then
+						if player.Character.HumanoidRootPart.Position.Y>cfs[1].Min and player.Character.HumanoidRootPart.Position.Y<cfs[1].Max then
+							koms[1].num +=1
+						elseif player.Character.HumanoidRootPart.Position.Y>cfs[2].Min and player.Character.HumanoidRootPart.Position.Y<cfs[2].Max then
+							koms[2].num +=1
+
+						else
+							koms[3].num+=1
+						end
+					end	
+				end
+			end
+
+			local bestkom=nil	
+			local lasty= 8
+			for _, nj in pairs(koms)  do
+				if nj.num<=lasty and #nj.Numbers>=1 then
+					lasty=nj.num
+					bestkom=nj.Numbers
+				end
+			end
+
+			if bestkom then
+				local rand = bestkom[math.random(1,#bestkom)]
+				if rand then
+					sellremote:FireServer(rand)
+				end
+
+			else
+				print("U dont Have Animals")
+			end
+
+
+		end)
+
+
+
+
+
+
+
+		ButtonsF.Player.RemoteSell.MouseButton1Click:Connect(function()
+			if states.RemoteSell ==true then
+				states.RemoteSell=false
+				G2L5["2"].Visible=false
+				togglebutton(false, ButtonsF.Player.RemoteSell)
+			else
+				G2L5["2"].Visible=true
+
+
+				togglebutton(true,ButtonsF.Player.RemoteSell)
+				states.RemoteSell=true
+			end	
+		end)
+	end)
+
+	task.spawn(function()
+		game:GetService("Players").LocalPlayer.PlayerGui.Notification.Notification.ChildAdded:Connect(function(child)
+			if string.find(child.Text,"You stole") then
+				if states.AutoKickOnSteal then
+					game.Players.LocalPlayer:Kick("U stole an animal; ")
+				end
+			end
+		end)
+		ButtonsF.Player.AutoKickOnSteal.MouseButton1Click:Connect(function()
+			if states.AutoKickOnSteal then
+				states.AutoKickOnSteal=false
+				togglebutton(false, ButtonsF.Player.AutoKickOnSteal)
+			else
+				states.AutoKickOnSteal=true
+				togglebutton(true, ButtonsF.Player.AutoKickOnSteal)
+			end
+		end)
+
+	end)
+	ButtonsF.Player.SoundWhenPriorityJoined.MouseButton1Click:Connect(function()
+		if states.SoundWhenPriorityJoined ==true then
+			states.SoundWhenPriorityJoined=false
+			togglebutton(false, ButtonsF.Player.SoundWhenPriorityJoined)
+		else	
+			togglebutton(true, ButtonsF.Player.SoundWhenPriorityJoined)
+			states.SoundWhenPriorityJoined=true
+		end
+	end)
+
+	ButtonsF.Player.AutoUseCloner.MouseButton1Click:Connect(function()
+		if states.AutoUseCloner ==true then
+			togglebutton(false, ButtonsF.Player.AutoUseCloner)
+
+			states.AutoUseCloner = false
+		else
+			togglebutton(true, ButtonsF.Player.AutoUseCloner)
+			states.AutoUseCloner = true
+		end
+	end) 
+	task.spawn(function()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		local Iza = {};
+
+		Iza["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+		Iza["1"]["IgnoreGuiInset"] = true;
+		Iza["1"]["DisplayOrder"] = 10000;
+		Iza["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
+		Iza["1"]["Name"] = [[CarpetTp]];
+		Iza["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+		Iza["1"]["ResetOnSpawn"] = false;
+
+		Iza["2"] = Instance.new("Frame", Iza["1"]);
+		Iza["2"]["BorderSizePixel"] = 0;
+		Iza["2"]["BackgroundColor3"] = Color3.fromRGB(9, 13, 21);
+		Iza["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+		Iza["2"]["Size"] = UDim2.new(0, 319, 0, 525);
+		Iza["2"]["Position"] = UDim2.new(0.85056, 0, 0.56211, 0);
+		Iza["2"]["Name"] = [[MainBase]];
+		Iza["2"].Visible = states.CarpetTp
+		Instance.new("UIDragDetector", Iza["2"])
+
+		Iza["6"] = Instance.new("UICorner", Iza["2"]);
+		Iza["7"] = Instance.new("UIStroke", Iza["2"]);
+		Iza["7"]["Color"] = Color3.fromRGB(255, 255, 255);
+
+		local function createVisualFrame(parent, genText, displayText, modelSource, isHeader)
+			local mainFrame = Instance.new("Frame")
+			mainFrame.BackgroundColor3 = Color3.fromRGB(16, 21, 31)
+			mainFrame.BackgroundTransparency = 0.5
+			mainFrame.Parent = parent
+
+			if isHeader then
+				mainFrame.Name = "Header"
+				mainFrame.Size = UDim2.new(1, -10, 0, 55)
+				mainFrame.Position = UDim2.new(0, 5, 0, 5)
+			else
+				mainFrame.Size = UDim2.new(1, 0, 0, 60) -- הגדלה נוספת של השורה
+			end
+
+			local uiCorner = Instance.new("UICorner", mainFrame)
+			local uiStroke = Instance.new("UIStroke", mainFrame)
+			uiStroke.Color = Color3.fromRGB(255, 255, 255)
+
+			local generationLabel = Instance.new("TextLabel", mainFrame)
+			generationLabel.Name = "Generation"
+			generationLabel.TextWrapped = true
+			generationLabel.TextScaled = true
+			generationLabel.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+			generationLabel.TextColor3 = Color3.fromRGB(242, 246, 250)
+			generationLabel.BackgroundTransparency = 1
+			generationLabel.Size = UDim2.new(0.6, 0, 0.35, 0)
+			generationLabel.Text = genText
+			generationLabel.Position = UDim2.new(0, 85, 0, 12)
+
+			local displayNameLabel = Instance.new("TextLabel", mainFrame)
+			displayNameLabel.Name = "DisplayName"
+			displayNameLabel.TextWrapped = true
+			displayNameLabel.TextScaled = true
+			displayNameLabel.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+			displayNameLabel.TextColor3 = Color3.fromRGB(242, 246, 250)
+			displayNameLabel.BackgroundTransparency = 1
+			displayNameLabel.Size = UDim2.new(0, 200, 0, 20)
+			displayNameLabel.Text = displayText
+			displayNameLabel.Position = UDim2.new(0, 85, 0, 32)
+
+			local viewportFrame = Instance.new("ViewportFrame", mainFrame)
+			viewportFrame.Size = UDim2.new(0, 65, 0, 65) -- רזולוציה ויזואלית גדולה יותר
+			viewportFrame.Position = UDim2.new(0, 10, 0.5, -32.5)
+			viewportFrame.BackgroundTransparency = 1
+			viewportFrame.LightColor = Color3.fromRGB(255, 255, 255)
+			viewportFrame.Ambient = Color3.fromRGB(150, 150, 150)
+
+			if modelSource then
+				local clonedModel = modelSource:Clone()
+				clonedModel.Parent = viewportFrame
+				local cam = Instance.new("Camera")
+				local cf, size = clonedModel:GetBoundingBox()
+
+				cam.FieldOfView = 50
+				cam.CFrame = CFrame.new(cf.Position + (cf.LookVector * (size.Magnitude * 1.1)) + Vector3.new(0, size.Y/2, 0), cf.Position)
+				viewportFrame.CurrentCamera = cam
+				cam.Parent = viewportFrame
+			end
+
+			local textButton = Instance.new("TextButton", mainFrame)
+			textButton.BackgroundTransparency = 1
+			textButton.Size = UDim2.new(1, 0, 1, 0)
+			textButton.Text = ""
+
+			return mainFrame, textButton
+		end
+
+		local mainv1, buttonv1=	createVisualFrame(Iza["2"], "Carpet Panel", "Current Target: None", nil, true)
+
+		Iza["3"] = Instance.new("ScrollingFrame", Iza["2"]);
+		Iza["3"]["Active"] = true;
+		Iza["3"]["BorderSizePixel"] = 0;
+		Iza["3"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+		Iza["3"]["BackgroundTransparency"] = 1;
+		Iza["3"]["Size"] = UDim2.new(1, -10, 1, -85);
+		Iza["3"]["Position"] = UDim2.new(0, 5, 0, 70);
+		Iza["3"]["ScrollBarThickness"] = 4;
+		Iza["3"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+
+		local scrollingFrame = Iza["3"]
+		local PADDING = 6
+		local ELEMENT_HEIGHT = 60
+
+		local function refreshLayout()
+			local children = {}
+			for _, child in ipairs(scrollingFrame:GetChildren()) do
+				if child:IsA("Frame") then
+					table.insert(children, child)
+				end
+			end
+
+			-- מיון מהגדול לקטן לפי ערך הכסף (שם ה-Frame)
+			table.sort(children, function(a, b)
+				local valA = tonumber(a.Name) or 0
+				local valB = tonumber(b.Name) or 0
+				return valA > valB
+			end)
+
+			for i, child in ipairs(children) do
+				child.Position = UDim2.new(0, 0, 0, (i - 1) * (ELEMENT_HEIGHT + PADDING))
+			end
+
+			scrollingFrame.CanvasSize = UDim2.new(0, 0, 0, #children * (ELEMENT_HEIGHT + PADDING))
+		end
+
+		scrollingFrame.ChildAdded:Connect(function()
+			task.wait()
+			refreshLayout()
+		end)
+
+		ButtonsF.Player.TpToBest.MouseButton1Click:Connect(function()
+			states.CarpetTp = not states.CarpetTp
+			Iza["2"].Visible = states.CarpetTp
+			togglebutton(states.CarpetTp, ButtonsF.Player.TpToBest)
+		end)
+		local id = 0
+		workspace.Debris.ChildRemoved:Connect(function(child)
+			if child:GetAttribute("Id_v1") then
+				for _, frame_2 in pairs(Iza["3"]:GetChildren()) do
+					if child:GetAttribute("Id_v1")==frame_2:GetAttribute("Id_v1") then
+						frame_2:Destroy()
+					end	
+				end
+			end
+			if child==values.Animal.Animal then
+				values.Animal.Animal=nil
+				values.Animal.AnimalName=""
+				values.Animal.AnimalValue=""
+				values.Animal.AnimalPosition=nil
+			end
+		end)
+		workspace.Debris.ChildAdded:Connect(function(part)
+
+			id=id+1
+			part:SetAttribute("Id_v1",id)
+			local AnimalOverhead = part:FindFirstChild("AnimalOverhead")
+			if AnimalOverhead then
+				local Gen = AnimalOverhead.Generation
+				if Gen then
+					local rt = ""
+					local Multi = 1
+					for i2 = 1, #Gen.Text, 1 do
+						local ty = string.sub(Gen.Text, i2, i2)
+						if tonumber(ty) then
+							rt = rt .. ty
+						elseif ty == "M" then Multi = 1000000
+						elseif ty == "K" then Multi = 1000
+						elseif ty == "B" then Multi = 1000000000
+						end						
+					end
+					if part.Position.X+410>26 or part.Position.X+410<20   then 
+						local result = (tonumber(rt) or 0) * Multi
+						local Animal = game:GetService("ReplicatedStorage").Models.Animals:FindFirstChild(AnimalOverhead.DisplayName.Text)
+						if Animal then
+							local z52 = AnimalOverhead.Mutation.Visible and AnimalOverhead.Mutation.Text.. " " or ""
+							local frame, btn = createVisualFrame(scrollingFrame, AnimalOverhead.Generation.Text, z52..AnimalOverhead.DisplayName.Text, Animal, false)
+							frame:SetAttribute("Id_v1",part:GetAttribute("Id_v1"))
+							frame.Name = tostring(result)
+							btn.MouseButton1Click:Connect(function()
+								mainv1.Generation.Text=frame.Generation.Text
+								mainv1.DisplayName.Text=frame.DisplayName.Text
+								values.Animal.Animal=part
+								values.Animal.AnimalName=frame.DisplayName.Text	
+								values.Animal.AnimalValue=frame.Generation.Text
+								values.Animal.AnimalPosition=part.CFrame
+							end)
+						end
+					end
+				end
+			end	end)
+		for _, part in pairs(workspace.Debris:GetChildren()) do
+			if part:IsA("BasePart") and part.Position.X+410>5 or part.Position.X+410<5   then 
+				id=id+1
+				part:SetAttribute("Id_v1",id)
+				local AnimalOverhead = part:FindFirstChild("AnimalOverhead")
+				if AnimalOverhead then
+					local Gen = AnimalOverhead.Generation
+					if Gen then
+						local rt = ""
+						local Multi = 1
+						for i2 = 1, #Gen.Text, 1 do
+							local ty = string.sub(Gen.Text, i2, i2)
+							if tonumber(ty) then
+								rt = rt .. ty
+							elseif ty == "M" then Multi = 1000000
+							elseif ty == "K" then Multi = 1000
+							elseif ty == "B" then Multi = 1000000000
+							end						
+						end
+						local result = (tonumber(rt) or 0) * Multi
+						local Animal = game:GetService("ReplicatedStorage").Models.Animals:FindFirstChild(AnimalOverhead.DisplayName.Text)
+						if Animal then
+							local z52 = AnimalOverhead.Mutation.Visible and AnimalOverhead.Mutation.Text.. " " or ""
+							local frame, btn = createVisualFrame(scrollingFrame, AnimalOverhead.Generation.Text, z52..AnimalOverhead.DisplayName.Text, Animal, false)
+							frame:SetAttribute("Id_v1",part:GetAttribute("Id_v1"))
+							frame.Name = tostring(result)
+							btn.MouseButton1Click:Connect(function()
+								mainv1.Generation.Text=frame.Generation.Text
+								mainv1.DisplayName.Text=frame.DisplayName.Text
+								values.Animal.Animal=part
+								values.Animal.AnimalName=frame.DisplayName.Text
+								values.Animal.AnimalValue=frame.Generation.Text
+								values.Animal.AnimalPosition=part.CFrame
+							end)
+						end
+					end
+				end
+			end
+		end	
+
+
+
+
+		refreshLayout()
+	end)
+
+	local e1=	"f40f7d9e-2f0d-4167-b250-899273f46874"
+	local e2="3ba148c9-7ed6-4675-93f8-9f7c356a2c54"
+
+
+	local firstremote=game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Net"):FindFirstChild(loading:RemoteEvent(e1).Name)
+	local lastremote= game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Net"):FindFirstChild(loading:RemoteEvent(e2).Name)
+
+	local function fastTeleportTo(rtq)
+		local targetPosz = rtq.Pos
+		local character = game.Players.LocalPlayer.Character
+		local rootPart = character.HumanoidRootPart
+
+		local attempts = 0
+		local reached = false
+
+		while attempts < 5 and not reached do
+			attempts = attempts + 1
+
+			if os.clock() - lastCompute < COOLDOWN then 
+				task.wait(COOLDOWN) 
+			end
+			lastCompute = os.clock()
+
+			local success = pcall(function()
+				path:ComputeAsync(rootPart.Position, targetPosz.Position)
+			end)
+
+			if success and path.Status == Enum.PathStatus.Success then
+				local waypoints = path:GetWaypoints()
+				local rayParams = RaycastParams.new()
+				rayParams.FilterDescendantsInstances = {character}
+				rayParams.FilterType = Enum.RaycastFilterType.Exclude
+
+				local i = 1
+				while i < #waypoints do
+					local jumpTo = i + 1
+
+					local maxSkip = math.max(i + 1, #waypoints - ((attempts - 1) * 4))
+
+					for j = maxSkip, i + 1, -1 do
+						local startP = waypoints[i].Position + Vector3.new(0, 2, 0)
+						local endP = waypoints[j].Position + Vector3.new(0, 2, 0)
+
+						if not workspace:Raycast(startP, endP - startP, rayParams) then
+							jumpTo = j
+							break
+						end
+					end
+
+					local targetWP = waypoints[jumpTo]
+					if (rootPart.Position - targetWP.Position).Magnitude < 13.5 then
+						task.wait(0.05)
+					end
+
+					rootPart.CFrame = CFrame.new(targetWP.Position + Vector3.new(0, 3.5, 0))
+					i = jumpTo
+				end
+			else
+				rootPart.CFrame = CFrame.new(targetPosz.Position + Vector3.new(0, 5, 0))
+			end
+
+			task.wait(0.3)
+			if (rootPart.Position - targetPosz.Position).Magnitude < 7 then
+				reached = true
+			end
+		end
+
+		if reached then
+			if rtq.Jump then
+				task.wait(0.2)
+				rootPart.AssemblyLinearVelocity = Vector3.new(0, rtq.Jump * 5.5, 0)
+				task.wait(0.3)
+				rootPart.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+			end
+
+			if rtq.Main then
+				rootPart.CFrame = rtq.Main
+			end
+		end
+	end
+	function eq()
+		local QuantumCloner= game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Quantum Cloner") or game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character:FindFirstChild("Quantum Cloner")
+		if QuantumCloner and game.Players.LocalPlayer.Character.Humanoid.Health~=0	then
+			game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(QuantumCloner)
+			wait()
+			QuantumCloner:Activate()
+			for iv2=1,2,1 do
+				if workspace:FindFirstChild(tostring(game:GetService("Players").LocalPlayer.UserId).."_Cloner") then
+					break
+				end
+				wait()
+			end
+			Remotes.Cloner:FireServer()
+		end
+
+	end
+
+	function getclos(rootPart)
+		local lastmag= 611
+		local lastbase=nil
+		local lastpod=0
+		for _, n in pairs(workspace.Plots:GetChildren()) do
+			for _, n2 in pairs(n.AnimalPodiums:GetChildren()) do
+
+				if n2.Base:FindFirstChild("Spawn") then
+					local mag= (n2.Claim.Hitbox.Position-rootPart).Magnitude
+					if mag<lastmag then
+						lastmag=mag
+						lastbase=n.Name
+						lastpod=tonumber(n2.Name)
+					end
+				end
+			end
+
+		end
+		print(lastmag)
+		return {Base= lastbase,Pod=lastpod}
+	end
+
+	game:GetService("UserInputService").InputBegan:Connect(function(l)
+		if l.KeyCode == Keys.AutoUseCloner.KeyCode and states.AutoUseCloner then
+			eq()
+		elseif l.KeyCode==Keys.CarpetTp.KeyCode and states.CarpetTp then
+			local StarterGui = game:GetService("StarterGui")
+			StarterGui:SetCore("SendNotification", {
+				Title = "Carpet Tp Activated",                  -- Notification title
+				Text = "Target: "..values.Animal.AnimalName..", Gen:"..values.Animal.AnimalValue, 
+				Icon="http://www.roblox.com/asset/?id=223080070",-- Main message
+				Duration = 5,                      -- How long it stays (seconds)
+			})
+
+			local r =getClosestBase(values.Animal.Animal.CFrame)
+			if r then
+				local three= false
+				if values.Animal.Animal.CFrame.Position.Y>18 and values.Animal.Animal.CFrame.Position.Y<30 then
+					r = r[2]
+				elseif values.Animal.Animal.CFrame.Position.Y>35 then
+					r = r[2]
+					three= true
+				else
+					r = r[1]
+				end
+
+				local carpet=game.Players.LocalPlayer.Backpack:FindFirstChild("Flying Carpet") or game.Players.LocalPlayer.Character:FindFirstChild("Flying Carpet")
+				if carpet then
+					game.Players.LocalPlayer.Character.Humanoid:EquipTool(carpet)
+					for _=1,20,1 do
+						if game.Players.LocalPlayer.Character:FindFirstChild("Flying Carpet") then
+							break
+						end
+						game:GetService("RunService").Heartbeat:Wait()
+					end
+					fastTeleportTo(r)
+					wait(0.4)
+					eq()
+					wait(0.2)
+					game.Players.LocalPlayer.Character.Humanoid:EquipTool(carpet)
+					for _=1,20,1 do
+						if game.Players.LocalPlayer.Character:FindFirstChild("Flying Carpet") then
+							break
+						end
+						game:GetService("RunService").Heartbeat:Wait()
+					end
+					wait(0.4)
+					---if three ==false then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=values.Animal.Animal.CFrame-Vector3.new(0,3,0)
+
+					local rt6 = getclos(values.Animal.Animal.CFrame.Position)
+					if rt6.Base and rt6.Pod then
+						wait(0.3)
+						for _=1,5,1 do
+							print(rt6.Base,rt6.Pod)
+							local args = {
+								1774111193.35384,
+								"68c86eb7-eb7e-4b4d-96ae-cf7cd847c5b0"
+							}
+							firstremote:FireServer(unpack(args))
+
+							local args1 = {
+								1774111193.354249,
+								"07b9cc25-2a1f-4a26-a0ec-f2fab578d8bd"
+							}
+
+							firstremote:FireServer(unpack(args1))
+
+							local args2 = {
+								1774111101.85491,
+								"cda5c764-d4e3-45c4-94e4-53a538347590",
+								rt6.Base,
+								tonumber(rt6.Pod)	
+							}
+							lastremote:FireServer(unpack(args2))
+							local args3 = {
+								1774111101.855333,
+								"8c852fbf-d542-4ef4-aa28-612e24db8d4a",
+								rt6.Base,
+								tonumber(rt6.Pod)
+							}
+							lastremote:FireServer(unpack(args3))
+							if game.Players.LocalPlayer:GetAttribute("Stealing") ==true then
+								break
+							end
+							wait()
+							--end	
+						end
+					end	
+				end
+
+			end
+		end
+	end)
+	local function cleanEffects(plr, mode)
+		local char = plr.Character
+		local lp = game.Players.LocalPlayer
+
+		if char then
+			if mode == "Player" or mode == "All" then
+				local h = char:FindFirstChild("Highlight_0")
+				if h then h:Destroy() end
+				local b = char:FindFirstChild("StealBeam")
+				if b then b:Destroy() end
+				local a = char:FindFirstChild("StealAtt")
+				if a then a:Destroy() end
+
+				if lp.Character and lp.Character:FindFirstChild("HumanoidRootPart") then
+					local old = lp.Character.HumanoidRootPart:FindFirstChild("To_" .. plr.Name)
+					if old then old:Destroy() end
+				end
+			end
+
+			if mode == "Base" or mode == "All" then
+				local b2 = char:FindFirstChild("StealBeam2")
+				if b2 then b2:Destroy() end
+				local a2 = char:FindFirstChild("StealAtt2")
+				if a2 then a2:Destroy() end
+
+				for _, plot in pairs(workspace.Plots:GetChildren()) do
+					local delivery = plot:FindFirstChild("DeliveryHitbox")
+					if delivery then
+						local old = delivery:FindFirstChild("To_" .. plr.Name .. "2")
+						if old then old:Destroy() end
+					end
+				end
+			end
+		end
+	end
+
+	local function applyEffects(plr)
+		local char = plr.Character
+		local lp = game.Players.LocalPlayer
+		if not char or not char:FindFirstChild("HumanoidRootPart") or not lp.Character or not lp.Character:FindFirstChild("HumanoidRootPart") then return end
+
+		local isStealing = plr:GetAttribute("Stealing")
+
+		if states.EspPlayerStealing and isStealing then
+			if not char:FindFirstChild("StealBeam") then
+				local h = Instance.new("Highlight")
+				h.Name = "Highlight_0"
+				h.Parent = char
+
+				local att0 = Instance.new("Attachment")
+				att0.Name = "To_" .. plr.Name
+				att0.Parent = lp.Character.HumanoidRootPart
+
+				local att1 = Instance.new("Attachment")
+				att1.Name = "StealAtt"
+				att1.Parent = char.HumanoidRootPart
+
+				local b = Instance.new("Beam")
+				b.Name = "StealBeam"
+				b.Attachment0 = att0
+				b.Attachment1 = att1
+				b.Width0, b.Width1 = 0.1, 0.1
+				b.FaceCamera = true
+				b.Parent = char
+			end
+		else
+			cleanEffects(plr, "Player")
+		end
+
+		if states.EspPlayerStealingBase and isStealing then
+			if not char:FindFirstChild("StealBeam2") then
+				local targetPlot = nil
+				for _, plot in pairs(workspace.Plots:GetChildren()) do
+					local Data = items.reqdata:InvokeServer(plot.Name)
+					if Data and Data.Owner == plr then
+						targetPlot = plot
+						break
+					end
+				end
+
+				if targetPlot and targetPlot:FindFirstChild("DeliveryHitbox") then
+					local att0 = Instance.new("Attachment")
+					att0.Name = "To_" .. plr.Name .. "2"
+					att0.Parent = targetPlot.DeliveryHitbox
+
+					local att1 = Instance.new("Attachment")
+					att1.Name = "StealAtt2"
+					att1.Parent = char.HumanoidRootPart
+
+					local b = Instance.new("Beam")
+					b.Name = "StealBeam2"
+					b.Attachment0 = att0
+					b.Attachment1 = att1
+					b.Width0, b.Width1 = 0.1, 0.1
+					b.FaceCamera = true
+					b.Parent = char
+				end
+			end
+		else
+			cleanEffects(plr, "Base")
+		end
+	end
+
+	ButtonsF.Player.EspPlayerStealingBase.MouseButton1Click:Connect(function()
+		states.EspPlayerStealingBase = not states.EspPlayerStealingBase
+		togglebutton(states.EspPlayerStealingBase, ButtonsF.Player.EspPlayerStealingBase)
+		for _, plr in pairs(game.Players:GetPlayers()) do
+			if plr ~= game.Players.LocalPlayer then
+				applyEffects(plr)
+			end
+		end
+	end)
+
+	ButtonsF.Player.EspPlayerStealing.MouseButton1Click:Connect(function()
+		states.EspPlayerStealing = not states.EspPlayerStealing
+		togglebutton(states.EspPlayerStealing, ButtonsF.Player.EspPlayerStealing)
+		for _, plr in pairs(game.Players:GetPlayers()) do
+			if plr ~= game.Players.LocalPlayer then
+				applyEffects(plr)
+			end
+		end
+	end)
+
+	local function setupPlayer(plr)
+		if plr == game.Players.LocalPlayer then return end
+		plr:GetAttributeChangedSignal("Stealing"):Connect(function()
+			applyEffects(plr)
+		end)	
+		plr.CharacterAdded:Connect(function()
+			task.wait(0.5)
+			applyEffects(plr)
+		end)
+	end
+
+	for _, plr in pairs(game.Players:GetPlayers()) do setupPlayer(plr) end
+	game.Players.PlayerAdded:Connect(setupPlayer)
+	ButtonsF.Player.EspBrainrots.MouseButton1Click:Connect(function()
+		if states.Espbrainrots==false then
+			for _, n in pairs(workspace.Plots:GetChildren()) do
+				if n~=myplot then
+					for _, inj in pairs(n:GetChildren()) do
+						if inj:FindFirstChild("RootPart") and not inj:FindFirstChild("Highlight_v1256") then
+							local h=	Instance.new("Highlight")
+							h.Name="Highlight_v1256"
+							h.Parent=inj
+						end
+
+					end
+				end
+				states.Espbrainrots=true
+
+				togglebutton(true, ButtonsF.Player.EspBrainrots)
+			end		
+		else
+			for _, n in pairs(workspace.Plots:GetChildren()) do
+				if n~=myplot then
+					for _, inj in pairs(n:GetChildren()) do
+						if inj:FindFirstChild("RootPart") and inj:FindFirstChild("Highlight_v1256") then
+							inj:FindFirstChild("Highlight_v1256"):Destroy()
+						end
+
+					end
+				end
+
+
+				states.Espbrainrots=false
+				togglebutton(false, ButtonsF.Player.EspBrainrots)
+
+			end
+		end
+	end)
+	function getcloestcharacterofanimal(part)
+		for _, plot in pairs(workspace.Plots:GetChildren()) do
+			if plot~=myplot then
+
+				for _, animal in pairs(plot:GetChildren()) do
+					if animal:FindFirstChild("RootPart") then
+						if (animal:FindFirstChild("RootPart").Position-part.Position).Magnitude<15 then
+							return {animal=animal,Base=plot}
+
+
+
+
+
+						end
+
+
+					end
+				end	
+
+
+			end 
+		end
+
+		for _, animal in pairs(workspace.RenderedMovingAnimals:GetChildren()) do
+			if animal:FindFirstChild("RootPart")  then
+				if (animal:FindFirstChild("RootPart").Position-part.Position).Magnitude<15 then
+					return {animal=animal,Base=nil}
+				end
+			end
+		end	
+	end
+	ButtonsF.Player.EspBestGen.MouseButton1Click:Connect(function()
+		if states.EspBestGen==false then
+			states.EspBestGen=true
+
+			for _, part in pairs(workspace.Debris:GetChildren()) do
+				local AnimalOverhead=  part:FindFirstChild("AnimalOverhead")
+				if AnimalOverhead then
+					local Gen = AnimalOverhead.Generation
+					if Gen then
+						local rt = ""
+						local Multi=1
+						for i2=1,#Gen.Text,1 do
+							local ty =string.sub(Gen.Text,i2,i2)
+							if tonumber(ty) then
+								rt=rt..ty
+							elseif ty=="M" then
+								Multi=1000^2
+							elseif ty=="K" then
+								Multi=1000
+							elseif ty=="B" then
+								Multi=1000^3
+							end						
+						end
+
+						local rt2= getcloestcharacterofanimal(part)
+
+						if rt2 and   tonumber(rt)*Multi>states.resultF1.result then
+							if rt2.animal then 
+
+								states.resultF1.result=tonumber(rt)*Multi
+								--print(5222)
+								states.resultF1.item= rt2.animal
+							end
+						end
+					end
+				end
+			end 
+			if states.resultF1.item then
+				--	print(90)
+				if not items.Highlightv5 then
+					items.Highlightv5=Instance.new("Highlight")
+					items.Highlightv5.Name="Highlightv5"
+					items.Highlightv5.FillColor=values.Highlightv5.FillColor
+				end
+				--items.Highlightv5.Adornee=states.resultF1.item:FindFirstChild("Part") or states.resultF1.item:FindFirstChild("Cube.001")
+				items.Highlightv5.Parent=states.resultF1.item		
+			end
+			togglebutton(true ,ButtonsF.Player.EspBestGen)	
+		else
+			togglebutton(false ,ButtonsF.Player.EspBestGen)	
+			items.Highlightv5.Parent=game:GetService("Lighting")
+			states.EspBestGen=false
+		end	
+
+	end)
+	for _, int in pairs(workspace.Plots:GetChildren()) do
+		if int~=myplot then
+			int.ChildAdded:Connect(function(child)
+				if #child:GetChildren()<0 then
+					child.ChildAdded:Wait()
+					wait(0.1)
+				end
+				if child:FindFirstChild("RootPart") and states.Espbrainrots==true 	then
+					if not child:FindFirstChild("Highlight_v1256") then
+						local h=	Instance.new("Highlight")
+						h.Name="Highlight_v1256"
+						h.Parent=child
+					end
+				end
+
+
+
+			end)
+			int.ChildRemoved:Connect(function(child)
+				if child:FindFirstChild("Highlightv5") then
+					child.Highlightv5.Parent=game:GetService("Lighting")
+
+				end
+			end)	
+		end	
+	end
+	workspace.Debris.ChildAdded:Connect(function(part)
+		if not items.Highlightv5 then
+			items.Highlightv5=Instance.new("Highlight")
+			items.Highlightv5.Name="Highlightv5"
+			items.Highlightv5.FillColor=values.Highlightv5.FillColor
+			items.Highlightv5.Parent=game:GetService("Lighting")	
+		end	
+		wait(0.5) 
+		local AnimalOverhead=  part:FindFirstChild("AnimalOverhead")
+		if AnimalOverhead then
+			if table.find(Priority,AnimalOverhead.DisplayName.Text) and states.SoundWhenPriorityJoined then
+				SoundPriority.sound.Parent=game:GetService("SoundService")
+				SoundPriority.sound:Play()
+				print(52)
+			end
+			local Gen = AnimalOverhead.Generation
+			if Gen then
+				local rt = ""
+				local Multi=1
+				for i2=1,#Gen.Text,1 do
+					local ty =string.sub(Gen.Text,i2,i2)
+					if tonumber(ty) then
+						rt=rt..ty
+					elseif ty=="M" then
+						Multi=1000^2
+					elseif ty=="K" then
+						Multi=1000
+					elseif ty=="B" then
+						Multi=1000^3
+					end						
+				end
+
+				local rt2= getcloestcharacterofanimal(part)
+
+				if rt2 and   tonumber(rt)*Multi>states.resultF1.result then
+					if rt2.animal then 
+
+						states.resultF1.result=tonumber(rt)*Multi
+						--print(5222)
+						states.resultF1.item= rt2.animal
+					end
+				end
+			end
+			if states.resultF1.item then
+				--print(90)
+				--items.Highlightv5.Adornee=states.resultF1.item:FindFirstChild("Part") or states.resultF1.item:FindFirstChild("Cube.001")
+				items.Highlightv5.Parent=states.resultF1.item		
+			end	
+
+		end	
+	end)
+
+
+	ButtonsF.Player.InfiniteJump.MouseButton1Click:Connect(function()
+		if states.InfJump==true then 
+			states.InfJump=false
+			togglebutton(false,ButtonsF.Player.InfiniteJump)
+		else
+			states.InfJump=true	
+			togglebutton(true,ButtonsF.Player.InfiniteJump)
+		end
+	end)
+	ButtonsF.Player.ChilliBooster.MouseButton1Click:Connect(function()
+		if not workspace:GetAttribute("or") then
+			togglebutton(true,ButtonsF.Player.ChilliBooster)
+			workspace:SetAttribute("or",true)
+			if not game:IsLoaded() then game.Loaded:wait()  end
+			task.spawn(function()
+
+
+				local MaterialService = game:GetService("MaterialService")
+
+				-- שם החומר החדש (תוכל לשנות)
+				local VARIANT_NAME = "UltraFlatNeon"
+
+				-- בדיקה אם החומר כבר קיים
+				local existing = MaterialService:FindFirstChild(VARIANT_NAME)
+				if existing then
+					existing:Destroy()
+					--	print("החומר הישן נמחק")
+				end
+
+				-- יצירת MaterialVariant חדש
+				local flatMaterial = Instance.new("MaterialVariant")
+				flatMaterial.Name = VARIANT_NAME
+				flatMaterial.BaseMaterial = Enum.Material.Neon
+
+				-- הגדרות לקלילות מקסימלית:
+				flatMaterial.ColorMap = ""                    -- ללא טקסטורת צבע
+				flatMaterial.NormalMap = ""                   -- ללא בליטות (flat)
+				flatMaterial.RoughnessMap = ""                -- ללא roughness
+				flatMaterial.MetalnessMap = ""                -- ללא metalness
+				--flatMaterial.AmbientOcclusionMap = ""         -- ללא AO
+
+				--flatMaterial.Color = Color3.fromRGB(200, 200, 255)   -- צבע בהיר-כחלחל (אפשר לשנות)
+
+				-- חשוב לביצועים:
+				flatMaterial.MaterialPattern = Enum.MaterialPattern.Regular
+
+				--	print("✅ נוצר חומר חדש: " .. VARIANT_NAME)
+
+				-- אופציונלי: Override גלובלי על Neon (כל החלקים עם Neon ישתמשו בזה)
+				-- MaterialService:SetBaseMaterialOverride(Enum.Material.Neon, VARIANT_NAME)
+
+				-- שמירה בתוך MaterialService
+				flatMaterial.Parent = MaterialService
+
+
+				if workspace:FindFirstChild("CyberMap") then
+					workspace.CyberMap:Destroy()
+				end
+				if workspace:FindFirstChild("Events") then
+					workspace.Events:Destroy()
+				end
+				if workspace.Map:FindFirstChild("Borders") then
+					workspace.Map.Borders:Destroy()
+				end
+				for _, k in pairs(workspace:GetDescendants()) do
+					if k:IsA("BasePart") then
+						k.Material =Enum.Material.Neon
+						k.MaterialVariant="UltraFlatNeon"
+						if k.Transparency<0.3 and k.Transparency~=0 then
+							k.Transparency=1
+						end
+					end
+				end
+			end)
+			task.spawn(function()
+				local Workspace = game:GetService("Workspace")
+
+				local function DisableAnimationsOnModel(model)
+					local humanoid = model:FindFirstChildOfClass("Humanoid")
+					if not humanoid then return end
+
+					-- 1. השבת את סקריפט Animate אם קיים
+					local animateScript = model:FindFirstChild("Animate")
+					if animateScript then
+						animateScript.Disabled = true
+					end
+
+					-- 2. עצור את כל האנימציות שרצות
+					local animator = humanoid:FindFirstChildOfClass("Animator")
+					if animator then
+						for _, track in ipairs(animator:GetPlayingAnimationTracks()) do
+							track:Stop(0)   -- עצירה מיידית
+						end
+
+						-- מניעת אנימציות חדשות
+						animator.AnimationPlayed:Connect(function(track)
+							track:Stop(0)
+						end)
+					end
+
+					-- 3. עצירה נוספת דרך Humanoid
+					for _, track in ipairs(humanoid:GetPlayingAnimationTracks()) do
+						track:Stop(0)
+					end
+				end
+
+				local function OptimizeAllMapAnimations()
+					--	print("🚫 מתחיל לכבות את כל האנימציות בכל המפה...")
+
+					local count = 0
+
+					for _, obj in ipairs(Workspace:GetDescendants()) do
+						if obj:IsA("Model") or obj:IsA("Folder") then
+							DisableAnimationsOnModel(obj)
+							count += 1
+						end
+					end
+
+					-- גם על דמויות חדשות שיופיעו
+					Workspace.DescendantAdded:Connect(function(descendant)
+						if descendant:IsA("Humanoid") then
+							task.wait(0.1) -- נותן זמן לדמות להיטען
+							DisableAnimationsOnModel(descendant.Parent)
+						end
+					end)
+
+					--	print("✅ סיום! טופלו " .. count .. " מודלים - כל האנימציות כבויות בכל המפה")
+				end
+
+				-- הרץ את הפונקציה
+				OptimizeAllMapAnimations()
+			end)
+			local Players = game:GetService("Players")
+			local Lighting = game:GetService("Lighting")
+			local Workspace = game:GetService("Workspace")
+			local allowedbrainrots = {
+				-- === THE 4 OGs (rarest tier) ===
+				"Skibidi Toilet",
+				"Strawberry Elephant",
+				"Meowl",
+				"Headless Horseman",
+
+				-- === ALL Secret Rarity Brainrots ===
+				-- Lower income ones first (as listed on the wiki)
+				"Jackorilla",
+				"Los Matteos",
+				"La Vacca Saturno Saturnita",
+				"Karkerkar Kurkur",
+				"Bisonte Giuppitere",
+				"Sammyni Spyderini",
+				"Trenostruzzo Turbo 4000",
+				"Torrtuginni Dragonfrutini",
+				"Dul Dul Dul",
+				"Blackhole Goat",
+				"Chachechi",
+				"Agarrini La Palini",
+				"Los Spyderinis",
+				"Extinct Tralalero",
+				"La Cucaracha",
+				"Los Tortus",
+				"Vulturino Skeletono",
+				"Los Tralaleritos",
+				"Zombie Tralala",
+				"Boatito Auratito",
+				"Guerriro Digitale",
+				"Yess my examine",
+				"La Karkerkar Combinasion",
+				"La Vacca Prese Presente",
+				"Reindeer Tralala",
+				"Extinct Matteo",
+				"Pumpkini Spyderini",
+				"Rocco Disco",
+				"Las Tralaleritas",
+				"Frankentteo",
+				"Job Job Job Sahur",
+				"Los Trios",
+				"Karker Sahur",
+				"Los Karkeritos",
+				"Las Vaquitas Saturnitas",
+				"Santteo",
+				"Fishboard",
+				"La Vacca Jacko Linterino",
+				"Buntteo",
+				"Triplito Tralaleritos",
+				"Trickolino",
+				"Paradiso Axolottino",
+				"GOAT",
+				"Giftini Spyderini",
+
+				"Graipuss Medussi",
+				"Perrito Burrito",
+				"Love Love Love Sahur",
+				"1x1x1x1",
+				"La Vacca Lepre Lepreino",
+				"Easter Easter Easter Sahur",
+				"Los Cucarachas",
+				"Please my Present",
+				"Cuadramat and Pakrahmatmamat",
+				"Los Jobcitos",
+				"Bunnyman",
+				"Berryno",
+				"Nooo My Hotspot",
+				"Noo my examine",
+
+				"La Sahur Combinasion",
+				"List List List Sahur",
+				"Telemorte",
+				"To to to Sahur",
+				"Bunny Bunny Bunny Sahur",
+				"Pot Hotspot",
+				"Pirulitoita Bicicleteira",
+				"Buho de Volto",
+				"25",
+				"Santa Hotspot",
+				"Horegini Boom",
+
+				"Naughty Naughty",
+				"Pot Pumpkin",
+				"Quesadilla Crocodila",
+				"Bunito Bunito Spinito",
+				"Cupid Cupid Sahur",
+				"Ho Ho Ho Sahur",
+				"Mi Gatito",
+				"Eid Eid Eid Sahur",
+				"Chicleteira Bicicleteira",
+				"Quesadillo Vampiro",
+				"Brunito Marsito",
+				"Cupid Hotspot",
+				"Luck Luck Luck Sahur",
+				"Chill Puppy",
+				"Burrito Bandito",
+				"Granny",
+				"Chicleteirina Bicicleteirina",
+				"Los Bunitos",
+				"Futbolini Skatini",
+				"Los Quesadillas",
+
+				"Noo my Candy",
+				"Arcadopus",
+				"Serafinna Medusella",
+				"Los Nooo My Hotspotsitos",
+				"Noo my Present",
+				"Rang Ring Bus",
+				"Strawberrita",
+				"Los Mi Gatitos",
+				"Los Chicleteiras",
+				"Noo my Eggs",
+				"67",
+				"Donkeyturbo Express",
+				"John Doe",
+				"Los Burritos",
+
+				"La Grande Combinasion",
+				"Los 25",
+				"Tacorillo Crocodillo",
+				"Mariachi Corazoni",
+				"Swag Soda",
+				"Noo my Heart",
+				"Noo my Gold",
+				"Chimnino",
+				"Bananito",
+				"Nuclearo Dinossauro",
+				"Los Combinasionas",
+				"Chicleteira Noelteira",
+				"Baskito",
+				"Tacorita Bicicleta",
+				"Los Sweethearts",
+				"Spinny Hammy",
+				"Las Sis",
+				"Chicleteira Cupideira",
+				"DJ Panda",
+				"Camera Ramena",
+				"Los Planitos",
+				"Snailo Clovero",
+
+				"Cigno Fulgoro",
+				"Los Spooky Combinasionas",
+				"Los Jolly Combinasionas",
+				"Los Hotspotsitos",
+				"Churrito Bunnito",
+				"Money Money Puggy",
+				"Los Mobilis",
+				"Los 67",
+				"Celularcini Viciosini",
+				"Los Candies",
+				"La Extinct Grande",
+				"Los Bros",
+				"Bacuru and Egguru",
+				"La Spooky Grande",
+				"Chillin Chili",
+				"Chipso and Queso",
+				"Money Money Reindeer",
+				"Mieteteira Bicicleteira",
+				"Tuff Toucan",
+				"Tralaledon",
+				"Gobblino Uniciclino",
+				"Los Cupids",
+				"W or L",
+				"Los Mariachis",
+				"Los Puggies",
+				"La Jolly Grande",
+				"Esok Sekolah",
+				"Los Primos",
+				"Eviledon",
+				"Los Tacoritas",
+				"Fragola La La La",
+				"Lovin Rose",
+				"Tang Tang Keletang",
+				"La Taco Combinasion",
+				"Dug dug dug",
+				"Ketupat Kepat",
+				"Tictac Sahur",
+				"Orcaledon",
+				"Swaggy Bros",
+				"La Romantic Grande",
+				"La Lucky Grande",
+				"Gym Bros",
+				"Ketchuru and Musturu",
+				"Tirilikalika Tirilikalako",
+				"Rico Dinero",
+				"Jolly Jolly Sahur",
+				"Lavadorito Spinito",
+				"Gold Gold Gold",
+				"Fishino Clownino",
+				"Money Money Bros",
+
+				"Nacho Spyder",
+				"Garama and Madundung",
+				"Rosetti Tualetti",
+				"Antonio",
+				"Hopilikalika Hopilikalako",
+				"La Easter Grande",
+				"Cloverat Clapat",
+				"Spaghetti Tualetti",
+				"Ventoliero Pavonero",
+				"Quackini Snackini",
+				"Guest 666",
+				"Festive 67",
+				"Los Spaghettis",
+				"Sammyni Fattini",
+				"La Ginger Sekolah",
+				"Ginger Gerat",
+				"Los Chillis",
+				"Los Hackers",
+				"Spooky and Pumpky",
+				"Elefanto Frigo",
+				"Duggy Bros",
+				"La Food Combinasion",
+
+				"La Casa Boo",
+				"Fragrama and Chocrama",
+				"Cash or Card",
+				"Signore Carapace",
+				"Los Sekolahs",
+				"Foxini Lanternini",
+				"Kalika Bros",
+				"Pancake and Syrup",
+				"La Secret Combinasion",
+				"Los Amigos",
+				"Fortunu and Cashuru",
+				"Reinito Sleighito",
+				"Ketupat Bros",
+
+				-- Higher tier / top Secret brainrots
+				"Dragon Gingerini",
+				"Dragon Cannelloni",
+				"Griffin",
+				"Hydra Dragon Cannelloni",  -- (older name / variant)
+				"Grante Angelta",
+				"Cooki and Milki",
+				"Headless Horseman",        -- (already in OGs but sometimes listed here before buff)
+				"Love Love Bear",
+				"Hydra Bunny",
+				"Bunny and Eggy",
+				"Cerberus",
+				"Celestial Pegasus",
+				"Popcuru and Fizzuru",
+				"Rosey and Teddy",
+				"Capitano Moby",
+				-- Add any other high-tier Secrets you know here if missing
+			}
+
+			local RANGE = 20
+			local UPDATE_RATE = 0.1
+
+			local stored = {}
+
+			Lighting.GlobalShadows = false
+			Lighting.Brightness = 0
+
+			pcall(function()
+				game:GetService("UserGameSettings").SavedQualityLevel = Enum.SavedQualitySetting.QualityLevel1
+			end)
+
+			local function disablePartShadows(obj)
+				if obj:IsA("BasePart") then
+					obj.CastShadow = false
+				end
+			end
+
+			for _, v in ipairs(Workspace:GetDescendants()) do
+				disablePartShadows(v)
+			end
+
+			Workspace.DescendantAdded:Connect(function(v)
+				disablePartShadows(v)
+			end)
+
+			local function getPosition(obj)
+				if obj:IsA("Model") then
+					local pp = obj.PrimaryPart or obj:FindFirstChildWhichIsA("BasePart")
+					if pp then return pp.Position end
+				elseif obj:IsA("BasePart") then
+					return obj.Position
+				end
+				return nil
+			end
+
+			local function getCFrame(obj)
+				if obj:IsA("Model") then
+					local pp = obj.PrimaryPart or obj:FindFirstChildWhichIsA("BasePart")
+					if pp then return pp.CFrame end
+				elseif obj:IsA("BasePart") then
+					return obj.CFrame
+				end
+			end
+
+			local function setCFrame(obj, cf)
+				if not cf then return end
+
+				if obj:IsA("Model") then
+					if obj.PrimaryPart then
+						obj:SetPrimaryPartCFrame(cf)
+					else
+						local p = obj:FindFirstChildWhichIsA("BasePart")
+						if p then p.CFrame = cf end
+					end
+				elseif obj:IsA("BasePart") then
+					obj.CFrame = cf
+				end
+			end
+
+			local function valid(obj, char)
+				if obj == char then return false end
+				if obj:IsDescendantOf(char) then return false end
+				if obj:IsA("Terrain") then return false end
+				if obj.Name:lower():find("baseplate") then return false end
+
+				return obj:IsA("Model") or obj:IsA("BasePart")
+			end
+			local player=game.Players.LocalPlayer
+			local function update()
+				local char = player.Character
+				if not char then return end
+
+				local root = char:FindFirstChild("HumanoidRootPart")
+				if not root then return end
+
+				local pos = root.Position
+
+				for _, obj in ipairs(Workspace:GetChildren()) do
+					if valid(obj, char) and not game.Players:GetPlayerFromCharacter(obj) then
+						if  obj:GetAttribute("Index") and table.find(allowedbrainrots,obj:GetAttribute("Index")) then
+
+						else
+							if table.find(allowedbrainrots,obj.Name) and obj:IsA("Model") and obj:FindFirstChild("RootPart") then
+
+							else
+								local p = getPosition(obj)
+								if p then
+									if (p - pos).Magnitude > RANGE  then
+										stored[obj] = getCFrame(obj)
+										obj.Parent = Lighting
+									end
+								end
+							end
+						end
+					end
+				end
+				for _, obj in ipairs(Lighting:GetChildren()) do
+					if stored[obj] then
+						local p = getPosition(obj)
+						if p and (p - pos).Magnitude <= RANGE then
+							obj.Parent = Workspace
+							task.wait()
+
+							setCFrame(obj, stored[obj])
+							stored[obj] = nil
+						end
+					end
+				end
+			end
+
+			while true do
+				update()
+				task.wait(UPDATE_RATE)
+			end
+		end
+	end)
+	game:GetService("UserInputService").InputBegan:Connect(function(l)
+		if l.KeyCode==Enum.KeyCode.Space and game.Players.LocalPlayer.Character and states.InfJump==true   then
+			states.InfJump2=true	
+			while states.InfJump2  do
+				game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity=game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity+Vector3.new(0,states.InfJumpValue,0)
+				game:GetService("RunService").Heartbeat:Wait()
+			end	
+
+		end
+	end)
+	game:GetService("UserInputService").InputEnded:Connect(function(l)
+		if l.KeyCode==Enum.KeyCode.Space and game.Players.LocalPlayer.Character and states.InfJump==true then
+			states.InfJump2=false
+		end
+	end)
+	ButtonsF.Player.AntiRagdoll.Frame.TextButton.MouseButton1Click:Connect(function()
+		if states.AntiRagdoll==true then 
+			togglebutton(false,ButtonsF.Player.AntiRagdoll.Frame.TextButton)
+			states.AntiRagdoll=false
+			stopAntiRagdoll()	
+		else
+			togglebutton(true,ButtonsF.Player.AntiRagdoll.Frame.TextButton)
+
+			states.AntiRagdoll=true
+			startAntiRagdoll()
+		end
+
+	end)
+
+
+end)
